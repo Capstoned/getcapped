@@ -14,8 +14,13 @@ class CreatePartiesTable extends Migration {
 	{
 		Schema::create('parties', function(Blueprint $table)
 		{
-			$table->increments('party_id');
-			$table->integer('user_id')
+			$table->increments('id');
+			$table->integer('user_id')->unsigned();
+			$table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+			$table->text('comments');
+			$table->dateTime('event_date');
+			$table->dateTime('confirm_date');
+			$table->string('event_status');
 			$table->timestamps();
 		});
 	}
