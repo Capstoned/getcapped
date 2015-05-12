@@ -19,6 +19,10 @@ class CreateVendorsTable extends Migration {
 			$table->string('username')->unique();
 			$table->string('email')->unique();
 			$table->string('password');
+			$table->string('address');
+			$table->string('city');
+			$table->string('state');
+			$table->string('zip_code');
 			$table->integer('serviceCode');
 			$table->text('description');
 			$table->timestamps();

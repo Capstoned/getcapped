@@ -15,10 +15,10 @@ class CreatePartyVendorTable extends Migration {
 		Schema::create('party_vendor', function(Blueprint $table)
 		{
 			$table->increments('id');
-			$table->integer('party_id')->unsigned()->index();
-			$table->foreign('party_id')->references('id')->on('parties')->onDelete('cascade');
-			$table->integer('vendor_id')->unsigned()->index();
-			$table->foreign('vendor_id')->references('id')->on('vendors')->onDelete('cascade');
+			$table->integer('party_id')->unsigned();
+			$table->foreign('party_id')->references('id')->on('parties');
+			$table->integer('vendor_id')->unsigned();
+			$table->foreign('vendor_id')->references('id')->on('vendors');
 			$table->timestamps();
 		});
 	}
