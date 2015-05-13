@@ -11,7 +11,7 @@ class Vendor extends \Eloquent {
 		'city' => 'required',
 		'state' => 'required',
 		'zip_code' => 'required',
-		'event_date' => 'required',
+		'service_code' => 'required',
     );
 
 

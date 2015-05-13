@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 
 <html>
 
@@ -24,4 +24,7 @@
 </fieldset>
 {{Form::close()}}
 
+
 </body>
+
+</html>
