@@ -1,7 +1,5 @@
 <?php
-
 class HomeController extends BaseController {
-
 	/*
 	|--------------------------------------------------------------------------
 	| Default Home Controller
@@ -14,71 +12,24 @@ class HomeController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
-
 	public function showWelcome()
 	{
 		return View::make('hello');
 	}
-
-
 	public function showHome()
 	{
 		return View::make('home');
 	}
-
 	public function showTheme()
 	{
 		return View::make('theme');
 	}
-
-// Login page for testing user authentication
-
-	public function showLogin()
+	public function doVendorSetup()
 	{
-		return View::make('login');
+		return View::make('venor-signup');
 	}
-
-
-		//** Login functions
-
-	public function tryLogin()
-
+	public function doUserSetup()
 	{
-		$emailOrUsername = Input::get('email_or_username');
-		$password = Input::get('password');
-
-
-		if (Auth::attempt(array('email' => $emailOrUsername, 'password' => $password))
-			|| (Auth::attempt(array('username' => $emailOrUsername, 'password' => $password))))
-
-		{
-			Session::flash('successMessage', 'Logged in successfully.');
-			return Redirect::action('HomeController@showHome');
-
-		}
-
-		else
-
-		{
-			Session::flash('errorMessage', 'Log in failed. Please try again.');
-			dd($_POST);
-			echo "Login failed";
-			// return Redirect::action('HomeController@tryLogin')->withInput();
-		}
-
-
+		return View::make('user-signup');
 	}
-
-
-	public function logout()
-	{
-
-		Auth::logout();
-
-		Session::flash('successMessage', 'Logged out successfully.');
-
-		return Redirect::action('HomeController@showHome');
-	}
-
-	
 }
