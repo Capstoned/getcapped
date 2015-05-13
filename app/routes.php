@@ -11,9 +11,18 @@
 |
 */
 
-Route::get('/', function()
+// Route::get('/', function()
+// {
+// 	return View::make('hello');
+// });
+
+Route::get('/', 'HomeController@showHome');
+
+Route::get('/theme', 'HomeController@showTheme');
+
+Route::get('/dashboard', function()
 {
-	return View::make('hello');
+    return View::make('user-dashboard');
 });
 
 
