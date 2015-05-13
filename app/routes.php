@@ -22,10 +22,13 @@ Route::get('/theme', 'HomeController@showTheme');
 
 Route::get('/dashboard', function()
 {
-    return View::make('user-dashboard');
+    return View::make('dashboard');
 });
 
-
+Route::get('/user-signup', function()
+{
+    return View::make('users.create');
+});
 
 // TEST ROUTES
 Route::get('/user_setup', function()
