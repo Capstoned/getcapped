@@ -1,9 +1,8 @@
 <!DOCTYPE <html>
 <head>
-    <title>User Dashboard</title>
+    <title>My Dashboard</title>
 
     <meta charset="UTF-8">
-    <title>Party Planner</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="shortcut icon" href="favicon.png">
@@ -18,7 +17,7 @@
     <link rel="stylesheet" href="/css/freeze.css">
 
     <link rel="stylesheet" href="/css/dashboard.css">
-
+    <link rel="stylesheet" href="/css/calendar.css">
 
 
 
@@ -75,5 +74,51 @@
     <div class="dash-header">
         <img src="/img/freeze/bk-freeze.jpg">
     </div>
+
+<div id="weather">
+
+
+</div>
+
+<div id="calendar">
+
+</div>
+
+<div id="location">
+
+
+</div>
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/moment.js"></script>
+<script src="js/underscore.js"></script>
+<script src="js/calendar.js"></script>
+<script>
+$('#calendar').clndr();
+
+// so instead, pass in your template as a string!
+$('#calendar').clndr({
+  template: $('#calendar-template').html()
+});
+
+// there are a lot of options. the rabbit hole is deep.
+$('#calendar').clndr({
+  template: $('#calendar-template').html(),
+  events: [
+    { date: '2013-09-09', title: 'CLNDR GitHub Page Finished', url: 'http://github.com/kylestetz/CLNDR' }
+  ],
+  clickEvents: {
+    click: function(target) {
+      console.log(target);
+    },
+    onMonthChange: function(month) {
+      console.log('you just went to ' + month.format('MMMM, YYYY'));
+    }
+  },
+  doneRendering: function() {
+    console.log('this would be a fine place to attach custom event handlers.');
+  }
+});
+
+</script>
 </body>
 </html>
