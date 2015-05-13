@@ -23,3 +23,8 @@ Route::get('/user_setup', function()
 {
     return View::make('/partials/user_setup');
 });
+
+Route::get('/password_form', function()
+{
+    return View::make('/partials/password_form');
+});
