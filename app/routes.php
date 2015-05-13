@@ -25,3 +25,15 @@ Route::get('/dashboard', function()
     return View::make('user-dashboard');
 });
 
+
+
+// TEST ROUTES
+Route::get('/user_setup', function()
+{
+    return View::make('/partials/user_setup');
+});
+
+Route::get('/password_form', function()
+{
+    return View::make('/partials/password_form');
+});
