@@ -30,5 +30,15 @@ class HomeController extends BaseController {
 	{
 		return View::make('theme');
 	}
-	
+
+	public function doVendorSetup()
+	{
+		return View::make('venor-signup');
+	}
+
+	public function doUserSetup()
+	{
+		return View::make('user-signup');
+	}
+
 }
