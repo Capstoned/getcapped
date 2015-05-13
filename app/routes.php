@@ -37,3 +37,12 @@ Route::get('/password_form', function()
 {
     return View::make('/partials/password_form');
 });
+
+Route::post('/password_form', 'HomeController@tryLogin');
+
+
+// Login Authentication Troubleshooting
+
+Route::get('login', 'HomeController@showLogin');
+
+Route::post('login', 'HomeController@tryLogin');

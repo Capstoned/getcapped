@@ -30,5 +30,55 @@ class HomeController extends BaseController {
 	{
 		return View::make('theme');
 	}
+
+// Login page for testing user authentication
+
+	public function showLogin()
+	{
+		return View::make('login');
+	}
+
+
+		//** Login functions
+
+	public function tryLogin()
+
+	{
+		$emailOrUsername = Input::get('email_or_username');
+		$password = Input::get('password');
+
+
+		if (Auth::attempt(array('email' => $emailOrUsername, 'password' => $password))
+			|| (Auth::attempt(array('username' => $emailOrUsername, 'password' => $password))))
+
+		{
+			Session::flash('successMessage', 'Logged in successfully.');
+			return Redirect::action('HomeController@showHome');
+
+		}
+
+		else
+
+		{
+			Session::flash('errorMessage', 'Log in failed. Please try again.');
+			dd($_POST);
+			echo "Login failed";
+			// return Redirect::action('HomeController@tryLogin')->withInput();
+		}
+
+
+	}
+
+
+	public function logout()
+	{
+
+		Auth::logout();
+
+		Session::flash('successMessage', 'Logged out successfully.');
+
+		return Redirect::action('HomeController@showHome');
+	}
+
 	
 }
