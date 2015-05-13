@@ -33,7 +33,24 @@ Route::get('/user_setup', function()
     return View::make('/partials/user_setup');
 });
 
+Route::get('/vendor_setup', function()
+{
+    return View::make('/partials/vendor_setup');
+});
+
 Route::get('/password_form', function()
 {
     return View::make('/partials/password_form');
 });
+
+Route::get('/vendor_setup', function()
+{
+    return View::make('/partials/vendor_setup');
+});
+
+Route::get('/map', function()
+{
+    return View::make('/partials/map');
+});
+
+
