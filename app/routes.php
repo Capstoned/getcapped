@@ -15,3 +15,11 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+
+
+// TEST ROUTES
+Route::get('/user_setup', function()
+{
+    return View::make('/partials/user_setup');
+});
