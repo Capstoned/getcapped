@@ -22,54 +22,31 @@ Route::get('/', 'HomeController@showHome');
 // Max's Routes
 
 // Vendor pages
-Route::get('/vendor-sign', 'HomeController@showVendorSign');
+Route::get('/vendor-signup', 'HomeController@showVendorSignup');
 
 Route::get('/vendor-dash', 'HomeController@showVendorDash');
 
 // User pages
-Route::get('/user-sign', 'HomeController@showUserSign');
+Route::get('/user-signup', 'HomeController@showUserSignup');
 
 Route::get('/user-dash', 'HomeController@showUserDash');
 
 
+Route::resource('users', 'UsersController');
 
 
-// Benny's Routes
+// KB's Routes to the dashboard view and the user signup view
 
 
-// Route::get('/dashboard', function()
-// {
-//     return View::make('dashboard');
-// });
-// Route::get('/user-signup', function()
-// {
-//     return View::make('users.create');
-// });
+Route::get('/dashboard', function()
+{
+    return View::make('dashboard');
+});
+
+Route::get('/user-signup', function()
+{
+    return View::make('users.create');
+});
 
 
-
-// Route::post('/user-signup', 'HomeController@signup');
-
-// TEST ROUTES
-
-// Route::get('/user_setup', function()
-// {
-//     return View::make('/partials/user_setup');
-// });
-// Route::get('/vendor_setup', function()
-// {
-//     return View::make('/partials/vendor_setup');
-// });
-// Route::get('/password_form', function()
-// {
-//     return View::make('/partials/password_form');
-// });
-// Route::get('/vendor_setup', function()
-// {
-//     return View::make('/partials/vendor_setup');
-// });
-// Route::get('/map', function()
-// {
-//     return View::make('/partials/map');
-// });
 

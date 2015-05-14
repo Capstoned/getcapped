@@ -1,6 +1,5 @@
-
-
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+     
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
@@ -22,15 +21,13 @@
                             </li>
                             <li><a href="#reviews">reviews</a>
                             </li>
-                            <li><a href="#screens">dev team</a>
+                            <li><a href="#screens">screens</a>
                             </li>
-                            @if(!Auth::check())
-                                <li><a class="getApp" href="#getApp">Sign Up</a>
-                                </li>
-                            @else
-                                <li><a href="/dashboard"></a>My Account</li>
-                            @endif
-                            <li><a href="#support">contact us</a>
+                            <li><a href="#demo">demo</a>
+                            </li>
+                            <li><a class="getApp" href="#getApp">get app</a>
+                            </li>
+                            <li><a href="#support">support</a>
                             </li>
                         </ul>
                     </div>
@@ -38,3 +35,5 @@
                 </div>
                 <!-- /.container-->
         </nav>
+
+        
