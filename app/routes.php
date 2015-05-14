@@ -13,8 +13,10 @@
 // {
 // 	return View::make('hello');
 // });
+
 Route::get('/', 'HomeController@showHome');
-Route::get('/theme', 'HomeController@showTheme');
+
+
 Route::get('/dashboard', function()
 {
     return View::make('dashboard');

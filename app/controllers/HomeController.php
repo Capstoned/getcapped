@@ -12,21 +12,15 @@ class HomeController extends BaseController {
 	|	Route::get('/', 'HomeController@showWelcome');
 	|
 	*/
-	public function showWelcome()
-	{
-		return View::make('hello');
-	}
+
 	public function showHome()
-	{
-		return View::make('home');
-	}
-	public function showTheme()
 	{
 		return View::make('theme');
 	}
+
 	public function doVendorSetup()
 	{
-		return View::make('venor-signup');
+		return View::make('vendor-signup');
 	}
 	public function doUserSetup()
 	{

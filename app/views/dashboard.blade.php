@@ -54,7 +54,7 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="/theme">Home</a>
+                            <li><a href="/">Home</a>
                             </li>
                             @if(!Auth::check())
                                 <li><a class="getApp" href="#getApp">Sign Up</a>
@@ -62,7 +62,7 @@
                             @elseif(Auth::check())
                                 <li><a href="#logout">Logout</a></li>
                             @endif
-                            <li><a href="/theme#support">contact us</a>
+                            <li><a href="/#support">contact us</a>
                             </li>
                         </ul>
                     </div>
@@ -70,55 +70,77 @@
                 </div>
                 <!-- /.container-->
         </nav>
-
+<!-- change from img to background image for this div -->
     <div class="dash-header">
         <img src="/img/freeze/bk-freeze.jpg">
     </div>
 
+<!-- This is the div for the calendar, #mini-clndr -->
+    <div id="calendar">
+        <div id="mini-clndr">
+            <script id="calendar-template" type="text/template">
+              <div class="controls">
+                <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %></div><div class="clndr-next-button">&rsaquo;</div>
+              </div>
+
+              <div class="days-container">
+                <div class="days">
+                  <div class="headers">
+                    <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
+                  </div>
+                  <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
+                </div>
+              </div>
+            </script>
+        </div>
+    </div>
+
 <div id="weather">
-
-
+<!-- This is the div for the weather -->
 </div>
 
-<div id="calendar">
-
+<div id="map">
+<!-- This is the div for the map -->
 </div>
+@include('partials.footer')
 
-<div id="location">
+<script src="/js/jquery-1.10.2.js"></script>
+<script src="/js/moment.js"></script>
+<script src="/js/underscore.js"></script>
+<script src="/js/calendar.js"></script>
 
-
-</div>
-<script src="js/jquery-1.10.2.js"></script>
-<script src="js/moment.js"></script>
-<script src="js/underscore.js"></script>
-<script src="js/calendar.js"></script>
 <script>
-$('#calendar').clndr();
+var currentMonth = moment().format('YYYY-MM');
+var nextMonth    = moment().add('month', 1).format('YYYY-MM');
+var events = [
+  { date: currentMonth + '-' + '10', title: 'Persian Kitten Auction', location: 'Center for Beautiful Cats' },
+  { date: currentMonth + '-' + '19', title: 'Cat Frisbee', location: 'Jefferson Park' },
+  { date: currentMonth + '-' + '23', title: 'Kitten Demonstration', location: 'Center for Beautiful Cats' },
+  { date: nextMonth + '-' + '07',    title: 'Small Cat Photo Session', location: 'Center for Cat Photography' }
+];
 
-// so instead, pass in your template as a string!
-$('#calendar').clndr({
-  template: $('#calendar-template').html()
-});
-
-// there are a lot of options. the rabbit hole is deep.
-$('#calendar').clndr({
+$('#mini-clndr').clndr({
   template: $('#calendar-template').html(),
-  events: [
-    { date: '2013-09-09', title: 'CLNDR GitHub Page Finished', url: 'http://github.com/kylestetz/CLNDR' }
-  ],
+  events: events,
   clickEvents: {
     click: function(target) {
-      console.log(target);
-    },
-    onMonthChange: function(month) {
-      console.log('you just went to ' + month.format('MMMM, YYYY'));
+      if(target.events.length) {
+        var daysContainer = $('#mini-clndr').find('.days-container');
+        daysContainer.toggleClass('show-events', true);
+        $('#mini-clndr').find('.x-button').click( function() {
+          daysContainer.toggleClass('show-events', false);
+        });
+      }
     }
   },
-  doneRendering: function() {
-    console.log('this would be a fine place to attach custom event handlers.');
-  }
+  adjacentDaysChangeMonth: true
 });
 
 </script>
 </body>
 </html>
+
+
+
+
+
