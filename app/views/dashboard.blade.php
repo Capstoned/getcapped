@@ -78,24 +78,24 @@
     </section>
 <!-- This is the div for the calendar, #mini-clndr -->
     <section id="section-two">
-        <div id="calendar">
-            <div id="mini-clndr">
-                <script id="calendar-template" type="text/template">
-                  <div class="controls">
-                    <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %></div><div class="clndr-next-button">&rsaquo;</div>
-                  </div>
+       
+           <div id="mini-clndr"></div>
 
-                  <div class="days-container">
-                    <div class="days">
-                      <div class="headers">
-                        <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
-                      </div>
-                      <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
-                    </div>
-                  </div>
-                </script>
-            </div>
+    <script id="calendar-template" type="text/template">
+      <div class="controls">
+        <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %></div><div class="clndr-next-button">&rsaquo;</div>
+      </div>
+
+      <div class="days-container">
+        <div class="days">
+          <div class="headers">
+            <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
+          </div>
+          <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
         </div>
+      </div>
+    </script>
+        
     </section>
 
     <section id="section3">
@@ -120,33 +120,32 @@
 <script src="/js/calendar.js"></script>
 
 <script>
-var currentMonth = moment().format('YYYY-MM');
-var nextMonth    = moment().add('month', 1).format('YYYY-MM');
-var events = [
-  { date: currentMonth + '-' + '10', title: 'Persian Kitten Auction', location: 'Center for Beautiful Cats' },
-  { date: currentMonth + '-' + '19', title: 'Cat Frisbee', location: 'Jefferson Park' },
-  { date: currentMonth + '-' + '23', title: 'Kitten Demonstration', location: 'Center for Beautiful Cats' },
-  { date: nextMonth + '-' + '07',    title: 'Small Cat Photo Session', location: 'Center for Cat Photography' }
-];
+  var currentMonth = moment().format('YYYY-MM');
+  var nextMonth    = moment().add('month', 1).format('YYYY-MM');
+  var events = [
+    { date: currentMonth + '-' + '10', title: 'Persian Kitten Auction', location: 'Center for Beautiful Cats' },
+    { date: currentMonth + '-' + '19', title: 'Cat Frisbee', location: 'Jefferson Park' },
+    { date: currentMonth + '-' + '23', title: 'Kitten Demonstration', location: 'Center for Beautiful Cats' },
+    { date: nextMonth + '-' + '07',    title: 'Small Cat Photo Session', location: 'Center for Cat Photography' }
+  ];
 
 $('#mini-clndr').clndr({
-  template: $('#calendar-template').html(),
-  events: events,
-  clickEvents: {
-    click: function(target) {
-      if(target.events.length) {
-        var daysContainer = $('#mini-clndr').find('.days-container');
-        daysContainer.toggleClass('show-events', true);
-        $('#mini-clndr').find('.x-button').click( function() {
-          daysContainer.toggleClass('show-events', false);
-        });
+    template: $('#calendar-template').html(),
+    events: events,
+    clickEvents: {
+      click: function(target) {
+        if(target.events.length) {
+          var daysContainer = $('#mini-clndr').find('.days-container');
+          daysContainer.toggleClass('show-events', true);
+          $('#mini-clndr').find('.x-button').click( function() {
+            daysContainer.toggleClass('show-events', false);
+          });
+        }
       }
-    }
-  },
-  adjacentDaysChangeMonth: true
-});
-
-</script>
+    },
+    adjacentDaysChangeMonth: true
+  });
+  </script>
 </body>
 </html>
 

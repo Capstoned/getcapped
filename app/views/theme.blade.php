@@ -597,8 +597,7 @@
                     <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
                 </div>
                 <div class="rights">
-                    <p>Copyright &copy; 2014</p>
-                    <p>Template by <a href="http://www.scoopthemes.com" target="_blank">ScoopThemes</a></p>
+                    <p>Copyright Party Planner &copy; {{ date('Y') }}</p>
                 </div>
             </div>
         </footer>

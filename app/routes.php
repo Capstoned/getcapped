@@ -34,17 +34,18 @@ Route::get('/user-dash', 'HomeController@showUserDash');
 
 
 
-// Benny's Routes
+// KB's Routes to the dashboard view and the user signup view
 
 
-// Route::get('/dashboard', function()
-// {
-//     return View::make('dashboard');
-// });
-// Route::get('/user-signup', function()
-// {
-//     return View::make('users.create');
-// });
+Route::get('/dashboard', function()
+{
+    return View::make('dashboard');
+});
+
+Route::get('/user-signup', function()
+{
+    return View::make('users.create');
+});
 
 
 
