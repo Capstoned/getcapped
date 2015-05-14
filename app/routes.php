@@ -37,39 +37,39 @@ Route::get('/user-dash', 'HomeController@showUserDash');
 // Benny's Routes
 
 
-Route::get('/dashboard', function()
-{
-    return View::make('dashboard');
-});
-Route::get('/user-signup', function()
-{
-    return View::make('users.create');
-});
+// Route::get('/dashboard', function()
+// {
+//     return View::make('dashboard');
+// });
+// Route::get('/user-signup', function()
+// {
+//     return View::make('users.create');
+// });
 
 
 
-Route::post('/user-signup', 'HomeController@signup');
+// Route::post('/user-signup', 'HomeController@signup');
 
 // TEST ROUTES
 
-Route::get('/user_setup', function()
-{
-    return View::make('/partials/user_setup');
-});
-Route::get('/vendor_setup', function()
-{
-    return View::make('/partials/vendor_setup');
-});
-Route::get('/password_form', function()
-{
-    return View::make('/partials/password_form');
-});
-Route::get('/vendor_setup', function()
-{
-    return View::make('/partials/vendor_setup');
-});
-Route::get('/map', function()
-{
-    return View::make('/partials/map');
-});
+// Route::get('/user_setup', function()
+// {
+//     return View::make('/partials/user_setup');
+// });
+// Route::get('/vendor_setup', function()
+// {
+//     return View::make('/partials/vendor_setup');
+// });
+// Route::get('/password_form', function()
+// {
+//     return View::make('/partials/password_form');
+// });
+// Route::get('/vendor_setup', function()
+// {
+//     return View::make('/partials/vendor_setup');
+// });
+// Route::get('/map', function()
+// {
+//     return View::make('/partials/map');
+// });
 

@@ -4,7 +4,7 @@
 @section('content')
 
   {{-- Verify that this CONTROLLER is correct --}}
-  {{ Form::open(array('action' => 'HomeController@doVendorSetup', 'method' => 'post')) }}
+  {{ Form::open(array('method' => 'post')) }}
   <div class="partytype">
 
     <h3>Party Types You Can Serve:</h3>
@@ -40,7 +40,7 @@
 
 
   {{-- Verify that this CONTROLLER is correct --}}
-  {{ Form::open(array('action' => 'HomeController@doVendorSetup', 'method' => 'post')) }}
+  {{ Form::open(array('method' => 'post')) }}
 
   <div class="service">
     <h3>Service to offer:</h3>
