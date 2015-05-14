@@ -22,9 +22,9 @@ class HomeController extends BaseController {
 
 	// Vendor sign in and dashboard views
 
-	public function showVendorSign()
+	public function showVendorSignup()
 	{
-		return View::make('vendor-sign');
+		return View::make('vendor-signup');
 	}
 
 	public function showVendorDash()
@@ -35,9 +35,9 @@ class HomeController extends BaseController {
 
 	// User sign in and dashboard views
 
-	public function showUserSign()
+	public function showUserSignup()
 	{
-		return View::make('user-sign');
+		return View::make('user-signup');
 	}
 
 	public function showUserDash()

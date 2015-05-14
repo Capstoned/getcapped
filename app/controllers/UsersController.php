@@ -35,12 +35,13 @@ class UsersController extends \BaseController {
 
 		if ($validator->fails())
 		{
+			Session::flash('errorMessage', 'User Create Error');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
+			Session::flash('successMessage', 'Saved successfully');
+			User::create($data);
 
-		User::create($data);
-
-		return Redirect::route('users.index');
+		return Redirect::to('/user-dash');
 	}
 
 	/**
@@ -83,11 +84,13 @@ class UsersController extends \BaseController {
 
 		if ($validator->fails())
 		{
+			Session::flash('errorMessage', 'Post not saved');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
 		$user->update($data);
 
+		Session::flash('successMessage', 'Saved successfully');
 		return Redirect::route('users.index');
 	}
 
