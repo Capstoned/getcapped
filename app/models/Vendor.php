@@ -23,7 +23,7 @@ class Vendor extends \Eloquent {
 
 	public static $serviceCodes = ['0' => 'balloons', 
 						'1' => 'catering', 
-						'2' => 'DJ', 
+						'2' => 'DJ', ];
 
 
 	public function parties()

@@ -34,5 +34,7 @@ Route::get('/user-dash', 'HomeController@showUserDash');
 
 Route::resource('users', 'UsersController');
 
+Route::resource('vendors', 'VendorsController');
+
 
 
