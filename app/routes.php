@@ -25,6 +25,9 @@ Route::get('/user-signup', function()
 {
     return View::make('users.create');
 });
+
+// Route::post('/user-signup', 'HomeController@signup');
+
 // TEST ROUTES
 Route::get('/user_setup', function()
 {

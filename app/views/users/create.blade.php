@@ -2,7 +2,6 @@
 <head>
     <title>Create User Account</title>
     <meta charset="UTF-8">
-    <title>Create User Account</title>
 
     <link rel="stylesheet" href="css/bootstrap.css">
 
@@ -14,10 +13,13 @@
      <link rel="stylesheet" href="/css/signup.css">
 </head>
 <body>
+    <section>
+        <div>
+            <img src="/img/freeze/bk-freeze-ga.jpg">
+        </div>
 
-    <div>
-        <img src="/img/freeze/bk-freeze-ga.jpg">
-    </div>
+       @include('partials.password_form')
+    </section>
 
     @include('partials.footer')
 </body>
