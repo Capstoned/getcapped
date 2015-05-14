@@ -37,7 +37,7 @@
     </div>
    
     <header>
-        
+
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -71,38 +71,48 @@
                 <!-- /.container-->
         </nav>
 <!-- change from img to background image for this div -->
-    <div class="dash-header">
-        <img src="/img/freeze/bk-freeze.jpg">
-    </div>
-
-<!-- This is the div for the calendar, #mini-clndr -->
-    <div id="calendar">
-        <div id="mini-clndr">
-            <script id="calendar-template" type="text/template">
-              <div class="controls">
-                <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %></div><div class="clndr-next-button">&rsaquo;</div>
-              </div>
-
-              <div class="days-container">
-                <div class="days">
-                  <div class="headers">
-                    <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
-                  </div>
-                  <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
-                </div>
-              </div>
-            </script>
+    <section id="section-one">
+        <div class="dash-header">
+            <img src="/img/freeze/bk-freeze.jpg">
         </div>
-    </div>
+    </section>
+<!-- This is the div for the calendar, #mini-clndr -->
+    <section id="section-two">
+        <div id="calendar">
+            <div id="mini-clndr">
+                <script id="calendar-template" type="text/template">
+                  <div class="controls">
+                    <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %></div><div class="clndr-next-button">&rsaquo;</div>
+                  </div>
 
-<div id="weather">
-<!-- This is the div for the weather -->
-</div>
+                  <div class="days-container">
+                    <div class="days">
+                      <div class="headers">
+                        <% _.each(daysOfTheWeek, function(day) { %><div class="day-header"><%= day %></div><% }); %>
+                      </div>
+                      <% _.each(days, function(day) { %><div class="<%= day.classes %>" id="<%= day.id %>"><%= day.day %></div><% }); %>
+                    </div>
+                  </div>
+                </script>
+            </div>
+        </div>
+    </section>
 
-<div id="map">
-<!-- This is the div for the map -->
-</div>
-@include('partials.footer')
+    <section id="section3">
+        <div id="weather">
+        <!-- This is the div for the weather -->
+        </div>
+    </section>
+
+    <section id="section-four">
+        <div id="map">
+        <!-- This is the div for the map -->
+        </div>
+    </section>
+
+    <section>
+        @include('partials.footer')
+    </section>
 
 <script src="/js/jquery-1.10.2.js"></script>
 <script src="/js/moment.js"></script>

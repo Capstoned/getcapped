@@ -58,4 +58,25 @@ class HomeController extends BaseController {
 	{
 		return View::make('user-signup');
 	}
+
+	//** Login functions
+ 
+	public function tryLogin()
+ 
+	{
+		$emailOrUsername = Input::get('email_or_username');
+		$password = Input::get('password');
+ 
+ 
+		if (Auth::attempt(array('email' => $emailOrUsername, 'password' => $password))
+			|| (Auth::attempt(array('username' => $emailOrUsername, 'password' => $password))))
+ 
+		{
+			Session::flash('successMessage', 'Logged in successfully.');
+			return View::make('dashboard');
+ 
+		}
+ 
+ 
+	}
 }

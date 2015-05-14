@@ -46,6 +46,12 @@ Route::get('/user-signup', function()
     return View::make('users.create');
 });
 
+
+
+Route::post('/user-signup', 'HomeController@signup');
+
+// TEST ROUTES
+
 Route::get('/user_setup', function()
 {
     return View::make('/partials/user_setup');
