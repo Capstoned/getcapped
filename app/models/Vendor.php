@@ -21,6 +21,11 @@ class Vendor extends \Eloquent {
 	protected $table = 'vendors';
 
 
+	public static $serviceCodes = ['0' => 'balloons', 
+						'1' => 'catering', 
+						'2' => 'DJ', 
+
+
 	public function parties()
 	{
 		return $this->belongsToMany('Party');
