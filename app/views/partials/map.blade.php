@@ -1,8 +1,7 @@
 
 {{-- Need to change key, Location and getElementById --}}
 
-
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVDWpiPnuk_XtrPz_D_Ckt3uxAWHjCjdI"></script>
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF11wPi5SN3aYUOdRD8DnEYfCNAFI0ClA"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     <script type="text/javascript">
@@ -44,8 +43,8 @@
                   map: map
                 });
             } else {
-              alert("Your browser doesn't support geolocation. We've placed you in Siberia.");
-              initialLocation = siberia;
+              alert("Your browser doesn't support geolocation. We've placed you in San Antonio.");
+              initialLocation = sanantonio;
               var marker = new google.maps.Marker({
                   position: initialLocation,
                   map: map
