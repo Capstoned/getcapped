@@ -34,6 +34,8 @@ Route::get('/user-dash', 'HomeController@showUserDash');
 
 Route::resource('users', 'UsersController');
 
+Route::resource('vendors', 'VendorsController');
+
 
 // KB's Routes to the dashboard view and the user signup view
 
