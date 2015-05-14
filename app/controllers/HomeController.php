@@ -27,7 +27,7 @@ class HomeController extends BaseController {
 		return View::make('vendor-sign');
 	}
 
-	public function showVendorSign()
+	public function showVendorDash()
 	{
 		return View::make('vendor-dash');
 	}
@@ -50,14 +50,14 @@ class HomeController extends BaseController {
 
 
 
-	public function doVendorSetup()
-	{
-		return View::make('vendor-signup');
-	}
-	public function doUserSetup()
-	{
-		return View::make('user-signup');
-	}
+	// public function doVendorSetup()
+	// {
+	// 	return View::make('vendor-signup');
+	// }
+	// public function doUserSetup()
+	// {
+	// 	return View::make('user-signup');
+	// }
 
 	//** Login functions
  

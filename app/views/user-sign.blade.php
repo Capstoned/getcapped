@@ -1,11 +1,11 @@
-@extends('master')
+@extends('layouts.master')
 
 @section('content')
 
 <div class="partytype">
 
   {{-- Verify that this CONTROLLER is correct --}}
-  {{ Form::open(array('action' => 'HomeController@doUserSetup', 'method' => 'post')) }}
+  {{ Form::open(array('method' => 'post')) }}
 
     <h3>Choose your party type:</h3>
     <div class="radio">
@@ -39,7 +39,7 @@
 
 
   {{-- Verify that this CONTROLLER is correct --}}
-  {{ Form::open(array('action' => 'HomeController@doUserSetup', 'method' => 'post')) }}
+  {{ Form::open(array('method' => 'post')) }}
   <div class="service">
     <h3>Services needed:</h3>
     <div class="checkbox">
