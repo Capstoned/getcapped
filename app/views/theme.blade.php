@@ -1,43 +1,7 @@
-<!doctype html>
-<!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
-<!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
-<!--[if IE 8]><html lang="en" class="no-js ie8"><![endif]-->
-<!--[if gt IE 8]><!-->
-<html lang="en" class="no-js">
-<!--<![endif]-->
+@extends('layouts.master')
 
-<head>
-    <meta charset="UTF-8">
-    <title>Party Planner</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <link rel="shortcut icon" href="favicon.png">
-
-    <link rel="stylesheet" href="css/bootstrap.css">
-    
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="js/rs-plugin/css/settings.css">
-
-    <link rel="stylesheet" href="css/freeze.css">
-
-    <link rel="stylesheet" href="css/partyplanner.css">
-
-
-
-    <script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
-
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    
-</head>
-
-<body>
-
-    <div class="pre-loader">
+@section('content')
+<div class="pre-loader">
         <div class="load-con">
             <img src="img/freeze/logo.png" class="animated fadeInDown" alt="">
             <div class="spinner">
@@ -47,49 +11,9 @@
             </div>
         </div>
     </div>
-   
+
     <header>
-        
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-                <div class="container">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                            <span class="fa fa-bars fa-lg"></span>
-                        </button>
-                        <a class="navbar-brand" href="index.html">
-                            <img src="img/freeze/logo.png" alt="" class="logo">
-                        </a>
-                    </div>
 
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#about">about</a>
-                            </li>
-                            <li><a href="#features">features</a>
-                            </li>
-                            <li><a href="#reviews">reviews</a>
-                            </li>
-                            <li><a href="#screens">dev team</a>
-                            </li>
-                            @if(!Auth::check())
-                                <li><a class="getApp" href="#getApp">Sign Up</a>
-                                </li>
-                            @else
-                                <li><a href="/dashboard"></a>My Account</li>
-                            @endif
-                            <li><a href="#support">contact us</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.navbar-collapse -->
-                </div>
-                <!-- /.container-->
-        </nav>
-
-        
         <!--RevSlider-->
         <div class="tp-banner-container">
             <div class="tp-banner" >
@@ -157,12 +81,9 @@
                             <img src="img/freeze/Slides/kids-party-setting.jpg" alt="">
                         </div>
 
-                        
                         <div class="tp-caption large_white_light sft" data-x="center" data-y="250" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1400" data-easing="Power4.easeOut">
                             Every Pixel <i class="fa fa-heart"></i>
                         </div>
-                        
-                        
                     </li>
 
                     <!-- SLIDE 3 -->
@@ -201,7 +122,6 @@
                             <a href="#" class="btn btn-primary inverse btn-lg">Purchase</a>
                         </div>
 
-                        
                         <div class="tp-caption mediumlarge_light_white sfl hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="-50" data-speed="1000" data-start="1000" data-easing="Power4.easeOut">
                            Powerful Responsive
                         </div>
@@ -215,10 +135,7 @@
                         <div class="tp-caption lfl hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="160" data-speed="1000" data-start="1800" data-easing="Power4.easeOut">
                             <a href="#" class="btn btn-primary inverse btn-lg">Purchase</a>
                         </div>
-                        
-                        
                     </li>
-                    
                 </ul>
             </div>
         </div>
@@ -229,11 +146,11 @@
 
     <div class="wrapper">
 
-        
+
 
         <section id="about">
             <div class="container">
-                
+
                 <div class="section-heading scrollpoint sp-effect3">
                     <h1>About Us</h1>
                     <div class="divider"></div>
@@ -470,23 +387,6 @@
             </div>
         </section>
 
-        <!-- <section id="demo">
-            <div class="container">
-                <div class="section-heading scrollpoint sp-effect3">
-                    <h1>Demo</h1>
-                    <div class="divider"></div>
-                    <p>Take a closer look in more detail</p>
-                </div>
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 scrollpoint sp-effect2">
-                        <div class="video-container" >
-                            <iframe src="http://player.vimeo.com/video/70984663"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-
         <section id="getApp">
             <div class="container-fluid">
                 <div class="section-heading inverse scrollpoint sp-effect3">
@@ -494,7 +394,7 @@
                     <div class="divider"></div>
                     <p>Choose your party platform and get started!</p>
                 </div>
-                
+
                 <div class="row">
                     <div class="col-md-12">
                         <div class="hanging-phone scrollpoint sp-effect2 hidden-xs">
@@ -506,7 +406,7 @@
                                 <span>Sign Up As A</span><br>
                                 <b>User</b>
                             </a>
-                            
+
                                 <a href="#" class="btn btn-primary inverse scrollpoint sp-effect2">
                                     <i class="fa fa-building fa-3x pull-left"></i>
                                     <span>Sign Up As A</span><br>
@@ -517,7 +417,7 @@
                     </div>
                 </div>
 
-                
+
 
             </div>
         </section>
@@ -601,58 +501,8 @@
                         <img src="img/freeze/screens/weather.jpg" alt="">
                         <h4>Weather Forcast</h4>
                     </div>
-                    <!-- <div class="one">
-                        <img src="img/freeze/screens/signup.jpg" alt="">
-                        <h4>Sign Up</h4>
-                    </div>
-                    <div class="one">
-                        <img src="img/freeze/screens/calendar.jpg" alt="">
-                        <h4>Event Calendar</h4>
-                    </div>
-                    <div class="two">
-                        <img src="img/freeze/screens/options.jpg" alt="">
-                        <h4>Some Options</h4>
-                    </div>
-                    <div class="three">
-                        <img src="img/freeze/screens/sales.jpg" alt="">
-                        <h4>Sales Analysis</h4>
-                    </div> -->
+
                 </div>
             </div>
         </section>
-
-        <footer>
-            <div class="container">
-                <a href="#" class="scrollpoint sp-effect3">
-                    <img src="img/freeze/logo.png" alt="" class="logo">
-                </a>
-                <div class="social">
-                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
-                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-google-plus fa-lg"></i></a>
-                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
-                </div>
-                <div class="rights">
-                    <p>Copyright Party Planner, LLC &copy; {{ date('Y') }}</p>
-                </div>
-            </div>
-        </footer>
-
-    </div>
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/placeholdem.min.js"></script>
-    <script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-    <script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/scripts.js"></script>
-
-    <script>
-        $(document).ready(function() {
-            appMaster.preLoader();
-        });
-    </script>
-
-</body>
-
-</html>
+@stop
