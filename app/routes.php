@@ -9,12 +9,32 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-// Route::get('/', function()
-// {
-// 	return View::make('hello');
-// });
+
+
+
 
 Route::get('/', 'HomeController@showHome');
+
+
+
+
+
+// Max's Routes
+
+// Vendor pages
+Route::get('/vendor-sign', 'HomeController@showVendorSign');
+
+Route::get('/vendor-dash', 'HomeController@showVendorDash');
+
+// User pages
+Route::get('/user-sign', 'HomeController@showUserSign');
+
+Route::get('/user-dash', 'HomeController@showUserDash');
+
+
+
+
+// Benny's Routes
 
 
 Route::get('/dashboard', function()
@@ -25,7 +45,7 @@ Route::get('/user-signup', function()
 {
     return View::make('users.create');
 });
-// TEST ROUTES
+
 Route::get('/user_setup', function()
 {
     return View::make('/partials/user_setup');
