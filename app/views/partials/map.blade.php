@@ -1,12 +1,13 @@
+
 {{-- Need to change key, Location and getElementById --}}
 
 
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVDWpiPnuk_XtrPz_D_Ckt3uxAWHjCjdI"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
     <script type="text/javascript">
         var initialLocation;
-        var siberia = new google.maps.LatLng(60, 105);
-        var newyork = new google.maps.LatLng(40.69847032728747, -73.9514422416687);
+        var sanantonio = new google.maps.LatLng(29.424122, -98.493628);
         var browserSupportFlag =  new Boolean();
 
         function initialize() {
@@ -14,7 +15,7 @@
             zoom: 15,
             mapTypeId: google.maps.MapTypeId.ROADMAP
           };
-          var map = new google.maps.Map(document.getElementById("sidebarMap"), myOptions);
+          var map = new google.maps.Map(document.getElementById("map"), myOptions);
 
           if(navigator.geolocation) {
             browserSupportFlag = true;
@@ -55,3 +56,4 @@
         }
         initialize();
     </script>
+
