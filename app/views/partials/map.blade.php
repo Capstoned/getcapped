@@ -5,15 +5,28 @@
 <head>
     <title>http://planner.dev/*</title>
 
-<style type="text/css">
-    #map{
-        height: 500px;
-        width: 500px;
-    }
-</style>
+    <style type="text/css">
+        #map{
+            height: 500px;
+            width: 500px;
+        }
+    </style>
 
 </head>
 
+
+<p>
+
+{{$party->address}}
+
+
+</p>
+
+
+
+{{-- $address = Get::address
+
+var adress = $address --}}
 
 <body>
 <h1>Here's the map page</h1>
@@ -23,10 +36,13 @@
 {{-- Need to change key, Location and getElementById --}}
 
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfixW9mRbDZRsuVyCOlYkNAbG9O46IILs"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
+    <script>
+        var address = "<?php echo $party->address ?>";
+        
+        // Geocoder.geocode(address);
+        console.log(address);
 
-    <script type="text/javascript">
         var initialLocation;
         var sanantonio = new google.maps.LatLng(29.424122, -98.493628);
         var browserSupportFlag =  new Boolean();
@@ -45,7 +61,8 @@
               map.setCenter(initialLocation);
               var marker = new google.maps.Marker({
                   position: initialLocation,
-                  map: map
+                  map: map,
+                  animation: google.maps.Animation.DROP
                 });
             }, function() {
               handleNoGeolocation(browserSupportFlag);

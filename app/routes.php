@@ -32,27 +32,42 @@ Route::get('/user-signup', 'HomeController@showUserSignup');
 Route::get('/user-dash', 'HomeController@showUserDash');
 
 
+
+
+
+
+
+
+
+
+
+
 Route::resource('users', 'UsersController');
 
 
-// KB's Routes to the dashboard view and the user signup view
 
 
-Route::get('/dashboard', function()
-{
-    return View::make('dashboard');
-});
 
-Route::get('/user-signup', function()
-{
-    return View::make('users.create');
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Map rendering Route
-Route::get('/map', function()
+Route::get('/bennytest', function()
 {
-    return View::make('/partials.map');
+    $party = Party::all()->random();
+    return View::make('/partials.map')->with('party', $party);
 });
-
-
-
