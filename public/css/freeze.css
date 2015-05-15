@@ -691,7 +691,7 @@ form textarea.form-control {
   width: 100%;
   height: 100%;
   z-index: 9999999;
-  display: none;
+  display: block;
 }
 .pre-loader .load-con {
   margin: 20% auto;

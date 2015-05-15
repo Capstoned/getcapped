@@ -69,7 +69,32 @@ Route::get('/maxtest', function()
 
 
 
-// KB's Routes to the dashboard view and the user signup view
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// KB's Routes to the dashboard view
 
 
 Route::get('/dashboard', function()
@@ -77,10 +102,6 @@ Route::get('/dashboard', function()
     return View::make('dashboard');
 });
 
-Route::get('/user-signup', function()
-{
-    return View::make('users.create');
-});
 
 
 
