@@ -30,21 +30,26 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	*
 	*@return hashed string
 	*/
+
+	// Hashing passwords
 	public function setPasswordAttribute($value)
 	{
 	    $this->attributes['password'] = Hash::make($value);
 	}
 
+	// Lowercasing usernames for convention
 	public function setUsernameAttribute($value)
     {
         $this->attributes['username'] = strtolower($value);
     }
 
+    // Establishing one-to-many model relationship
     public function parties()
 	{
 		return $this->belongsToMany('Party');
 	}
 
+	// Validation rules for storing new users
 	public static $rules = array(
      	'email'    => 'required|email|unique:users,email',
         'username' => 'required|unique:users,username',
