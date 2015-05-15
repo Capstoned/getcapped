@@ -32,9 +32,41 @@ Route::get('/user-signup', 'HomeController@showUserSignup');
 Route::get('/user-dash', 'HomeController@showUserDash');
 
 
+
+
+
+
+
+
+
+
+
+
 Route::resource('users', 'UsersController');
 
 Route::resource('vendors', 'VendorsController');
+
+Route::resource('parties', 'PartiesController');
+
+
+
+
+
+
+
+
+
+
+
+
+// TEST ROUTES FOR MAX / KB / BENNY
+
+Route::get('/maxtest', function()
+{
+	return View::make('/parties/create');
+	
+});
+
 
 
 // KB's Routes to the dashboard view and the user signup view

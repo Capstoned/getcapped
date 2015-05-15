@@ -35,14 +35,18 @@ class VendorsController extends \BaseController {
 
 		if ($validator->fails())
 		{
-			Session::flash('errorMessage', 'User Create Error');
+			$dd($errors);
+			Session::flash('errorMessage', 'Vendor Create Error');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 			Session::flash('successMessage', 'Saved successfully');
-			User::create($data);
+			Vendor::create(Input::except('_token'));
+			// Vendor::create($data);
 
 		return Redirect::to('/vendor-dash');
 	}
+
+
 
 	/**
 	 * Display the specified vendor.
