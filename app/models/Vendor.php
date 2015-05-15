@@ -2,30 +2,36 @@
 
 class Vendor extends \Eloquent {
 
+		protected $table = 'vendors';
+
+
 	// Add your validation rules here
 	public static $rules = array(
-     	'email'    => 'required|email|unique:users,email',
-        'username' => 'required|unique:users,username',
-        'password' => 'required|min:6',
+		'vendor_name'     => 'required',
+     	'email'    => 'required', //|email|unique:vendors,email',
+        'username' => 'required', //|unique:vendors,username',
+        'password' => 'required', //|min:6',
         'address' => 'required',
 		'city' => 'required',
 		'state' => 'required',
 		'zip_code' => 'required',
-		'service_code' => 'required',
+		'serviceCode' => 'required',
     );
 
 
 	// Don't forget to fill this array
-	protected $fillable = [];
 
-	protected $table = 'vendors';
+	protected $fillable = ['vendor_name', 'username', 'email', 'password', 'address',
+							 'city', 'state', 'zip_code', 'serviceCode', 'description'];
 
 
+
+ 	// Array of codes for types of vendor services
 	public static $serviceCodes = ['0' => 'balloons', 
 						'1' => 'catering', 
-						'2' => 'DJ', 
+						'2' => 'DJ', ];
 
-
+	// Many-to-many model relationship
 	public function parties()
 	{
 		return $this->belongsToMany('Party');

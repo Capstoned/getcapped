@@ -59,6 +59,8 @@
     </div>
   {{ Form::close() }}
 
+  {{ $errors->first('title', '<span class="help-block">:message</span>') }}
+
 </div>
 
 

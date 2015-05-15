@@ -28,14 +28,17 @@
  
             <label for="username">Username</label>
             <input id="username" name = "username" type="text" placeholder="Username">
+            {{ $errors->first('username', '<span class="help-block">:message</span>') }}
             <br>
  
             <label for="email">Email</label>
             <input id="email" name = "email" type="email" placeholder="Email">
+            {{ $errors->first('email', '<span class="help-block">:message</span>') }}
             <br>
  
             <label for="password">Password</label>
             <input id="password" name = "password" type="password">
+            {{ $errors->first('password', '<span class="help-block">:message</span>') }}
             <br>
  
             <button type="submit" class="pure-button pure-button-primary">Create Account</button>

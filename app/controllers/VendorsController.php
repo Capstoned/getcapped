@@ -35,13 +35,18 @@ class VendorsController extends \BaseController {
 
 		if ($validator->fails())
 		{
+			$dd($errors);
+			Session::flash('errorMessage', 'Vendor Create Error');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
+			Session::flash('successMessage', 'Saved successfully');
+			Vendor::create(Input::except('_token'));
+			// Vendor::create($data);
 
-		Vendor::create($data);
-
-		return Redirect::route('vendors.index');
+		return Redirect::to('/vendor-dash');
 	}
+
+
 
 	/**
 	 * Display the specified vendor.
@@ -77,18 +82,20 @@ class VendorsController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		$vendor = Vendor::findOrFail($id);
+		$user = User::findOrFail($id);
 
-		$validator = Validator::make($data = Input::all(), Vendor::$rules);
+		$validator = Validator::make($data = Input::all(), User::$rules);
 
 		if ($validator->fails())
 		{
+			Session::flash('errorMessage', 'Post not saved');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
-		$vendor->update($data);
+		$user->update($data);
 
-		return Redirect::route('vendors.index');
+		Session::flash('successMessage', 'Saved successfully');
+		return Redirect::route('users.index');
 	}
 
 	/**
