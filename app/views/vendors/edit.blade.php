@@ -1,1 +1,0 @@
-/vagrant/sites/capstone.dev/app/views/vendors/edit.blade.php

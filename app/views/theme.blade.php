@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="favicon.png">
 
     <link rel="stylesheet" href="css/bootstrap.css">
-    
+
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/slick.css">
@@ -30,7 +30,7 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
+
 </head>
 
 <body>
@@ -45,9 +45,9 @@
             </div>
         </div>
     </div>
-   
+
     <header>
-        
+
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
@@ -55,8 +55,8 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="fa fa-bars fa-lg"></span>
                         </button>
-                        <a class="app-name" href="index.html">
-                            <h1 class="app-name"><i class="fa fa-glass"></i> Party Planner
+                        <a class="navbar-brand" href="index.html">
+                            <img src="img/freeze/party-glass.png" alt="" class="logo">
                         </a>
                     </div>
 
@@ -66,12 +66,12 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#about">about</a>
                             </li>
-                            <li><a href="#features">features</a>
+                            <li><a href="#features"><i class="fa fa-gift"></i> features</a>
                             </li>
-                            <li><a href="#reviews">reviews</a>
+                            <li><a href="#reviews"><i class="fa fa-comments"></i> reviews</a>
                             </li>
                             @if(!Auth::check())
-                                <li><a class="getApp" href="#getApp">sign up</a>
+                                <li><a class="getApp" href="#getApp"><i class="fa fa-sign-in"></i> sign up</a>
                                 </li>
                             @else
                                 <li><a href="#">my account</a></li>
@@ -362,7 +362,7 @@
                 <div class="section-heading scrollpoint sp-effect3">
                     <h1>Features</h1>
                     <div class="divider"></div>
-                    <p>Learn more about this feature packed App</p>
+                    <p>Learn more about the easiest way to create memorale events</p>
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-sm-4 scrollpoint sp-effect1">
@@ -384,24 +384,7 @@
                                 Lorem ipsum dolor sit amet.
                             </div>
                         </div>
-                        <div class="media media-left feature">
-                            <a class="pull-right" href="#">
-                                <i class="fa fa-users fa-2x"></i>
-                            </a>
-                            <div class="media-body">
-                                <h3 class="media-heading">Friends List</h3>
-                                Lorem ipsum dolor sit amet.
-                            </div>
-                        </div>
-                        <div class="media media-left feature">
-                            <a class="pull-right" href="#">
-                                <i class="fa fa-comments fa-2x"></i>
-                            </a>
-                            <div class="media-body">
-                                <h3 class="media-heading">Live Chat Messages</h3>
-                                Lorem ipsum dolor sit amet.
-                            </div>
-                        </div>
+
                         <div class="media media-left feature">
                             <a class="pull-right" href="#">
                                 <i class="fa fa-calendar fa-2x"></i>
@@ -425,24 +408,7 @@
                                 Lorem ipsum dolor sit amet.
                             </div>
                         </div>
-                        <div class="media feature">
-                            <a class="pull-left" href="#">
-                                <i class="fa fa-film fa-2x"></i>
-                            </a>
-                            <div class="media-body">
-                                <h3 class="media-heading">Media Player™</h3>
-                                Lorem ipsum dolor sit amet.
-                            </div>
-                        </div>
-                        <div class="media feature">
-                            <a class="pull-left" href="#">
-                                <i class="fa fa-compass fa-2x"></i>
-                            </a>
-                            <div class="media-body">
-                                <h3 class="media-heading">Intuitive Statistics</h3>
-                                Lorem ipsum dolor sit amet.
-                            </div>
-                        </div>
+
                         <div class="media feature">
                             <a class="pull-left" href="#">
                                 <i class="fa fa-picture-o fa-2x"></i>
@@ -482,13 +448,13 @@
                         </div>
                         <div class="platforms">
                             <a href="#" class="btn btn-primary inverse scrollpoint sp-effect1">
-                                <i class="fa fa-android fa-3x pull-left"></i>
+                                <i class="fa fa-user fa-3x pull-left"></i>
                                 <span>Sign Up As A</span><br>
                                 <b>User</b>
                             </a>
                             
                                 <a href="#" class="btn btn-primary inverse scrollpoint sp-effect2">
-                                    <i class="fa fa-apple fa-3x pull-left"></i>
+                                    <i class="fa fa-user fa-3x pull-left"></i>
                                     <span>Sign Up As A</span><br>
                                     <b>Vendor</b>
                                 </a>
