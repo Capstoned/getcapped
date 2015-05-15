@@ -94,14 +94,32 @@ Route::get('/maxtest', function()
 
 
 
+
 // KB's Routes to the dashboard view
 
 
-Route::get('/dashboard', function()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Map rendering Route
+Route::get('/bennytest', function()
 {
-    return View::make('dashboard');
+    $party = Party::all()->random();
+    return View::make('/partials.map')->with('party', $party);
 });
-
-
-
-
