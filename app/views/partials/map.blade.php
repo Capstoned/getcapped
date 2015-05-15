@@ -1,8 +1,30 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>http://planner.dev/*</title>
+
+<style type="text/css">
+    #map{
+        height: 500px;
+        width: 500px;
+    }
+</style>
+
+</head>
+
+
+<body>
+<h1>Here's the map page</h1>
+
+<div id="map" ></div>
 
 {{-- Need to change key, Location and getElementById --}}
 
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDF11wPi5SN3aYUOdRD8DnEYfCNAFI0ClA"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfixW9mRbDZRsuVyCOlYkNAbG9O46IILs"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
 
     <script type="text/javascript">
         var initialLocation;
@@ -11,7 +33,7 @@
 
         function initialize() {
           var myOptions = {
-            zoom: 15,
+            zoom: 10,
             mapTypeId: google.maps.MapTypeId.ROADMAP
           };
           var map = new google.maps.Map(document.getElementById("map"), myOptions);
@@ -37,7 +59,7 @@
           function handleNoGeolocation(errorFlag) {
             if (errorFlag == true) {
               alert("Geolocation service failed.");
-              initialLocation = newyork;
+              initialLocation = sanantonio;
               var marker = new google.maps.Marker({
                   position: initialLocation,
                   map: map
@@ -55,4 +77,7 @@
         }
         initialize();
     </script>
+
+</body>
+</html>
 

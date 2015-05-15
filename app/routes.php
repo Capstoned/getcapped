@@ -48,5 +48,11 @@ Route::get('/user-signup', function()
     return View::make('users.create');
 });
 
+// Map rendering Route
+Route::get('/map', function()
+{
+    return View::make('/partials.map');
+});
+
 
 
