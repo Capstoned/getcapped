@@ -16,8 +16,9 @@
 
     <link rel="stylesheet" href="/css/freeze.css">
 
-    <link rel="stylesheet" href="/css/dashboard.css">
     <link rel="stylesheet" href="/css/calendar.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
+
 
 
 
@@ -75,12 +76,8 @@
         <div class="dash-header">
             <img src="/img/freeze/bk-freeze.jpg">
         </div>
-    </section>
-<!-- This is the div for the calendar, #mini-clndr -->
-    <section id="section-two">
-       
-           <div id="mini-clndr"></div>
-
+        <div id="calendar">
+        <div id="mini-clndr">
     <script id="calendar-template" type="text/template">
       <div class="controls">
         <div class="clndr-previous-button">&lsaquo;</div><div class="month"><%= month %></div><div class="clndr-next-button">&rsaquo;</div>
@@ -95,8 +92,10 @@
         </div>
       </div>
     </script>
-        
+    </div>
     </section>
+<!-- This is the div for the calendar, #mini-clndr -->
+    
 
     <section id="section3">
         <div id="weather">

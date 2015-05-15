@@ -1,3 +1,8 @@
 body{
-    background-color: #2F2F4F;
+    /*background-color: #2F2F4F;*/
+    background-image: url();
+    border: 3px solid #fff;
+}
+#section-three{
+    width: 100%
 }
