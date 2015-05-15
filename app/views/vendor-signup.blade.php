@@ -3,87 +3,71 @@
 
 @section('content')
 
-  {{-- Verify that this CONTROLLER is correct --}}
-  {{ Form::open(array('method' => 'post')) }}
-  <div class="partytype">
+<style type="text/css">
+  .partytype{
+    float:left;
+  }
+  .service{
+    float: left;
+    padding-left: 40px;
+  }
 
-    <h3>Party Types You Can Serve:</h3>
-
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" value="">
-        Child Birthday
-      </label>
-    </div>
-
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" value="">
-        Adult Birthday Party
-      </label>
-    </div>
-
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" value="">
-        Anniversary
-      </label>
-    </div>
-    <div class="checkbox">
-      <label>
-        <input type="checkbox" value="">
-        Other
-      </label>
-    </div>
-  </div>
-  {{ Form::close() }}
+  .spacer {
+    padding-top: 200px;
+  }
+</style>
 
 
-  {{-- Verify that this CONTROLLER is correct --}}
-  {{ Form::open(array('method' => 'post')) }}
 
-  <div class="service">
-    <h3>Service to offer:</h3>
-    <div class="radio">
-      <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-        Catering
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-        Cakes, etc.
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-        Chairs/Tables
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3">
-        Moon Bounce
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option4">
-        Pinata
-      </label>
-    </div>
-    <div class="radio">
-      <label>
-        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option5">
-        Beverages
-      </label>
-    </div>
+{{ Form::open(array('action' => 'VendorsController@store', 'id' => 'v-form', 'method' => 'post', 'class' => 'spacer pure-form pure-form-stacked')) }}
+    <fieldset>
+        <legend>Create Account</legend>
+        <label>Service Name</label>
+        <input type="text" name="vendor_name" value="{{Input::old('vendor_name ')}}">
+        {{ $errors->first('vendor_name', '<span class="help-block">:message</span>') }}
+ 
+        <label for="username">Username</label>
+        <input name="username" id="username" type="text" placeholder="Username">
+        {{ $errors->first('username', '<span class="help-block">:message</span>') }}
+        
+        <label for="email">Email</label>
+        <input name="email" id="email" type="email" placeholder="Email">
+        {{ $errors->first('email', '<span class="help-block">:message</span>') }}
 
-    <textarea class="form-control" rows="3"></textarea>
+        <label for="password">Password</label>
+        <input name="password" id="password" type="password">
+        {{ $errors->first('password', '<span class="help-block">:message</span>') }}
 
-    {{ Form::close() }}
+        <label for="address">Address</label>
+        <input name="address" id="address" type="text" placeholder="Address">
+        {{ $errors->first('address', '<span class="help-block">:message</span>') }}
+        
+        <label for="city">City</label>
+        <input name="city" id="city" type="text" placeholder="City">
+        {{ $errors->first('city', '<span class="help-block">:message</span>') }}
+        
+        <label for="state">State</label>
+        <input name="state" id="state" type="text" placeholder="State">
+        {{ $errors->first('state', '<span class="help-block">:message</span>') }}
+        
+        <label for="zip">ZIP</label>
+        <input name="zip_code" id="ZIP" type="text" placeholder="ZIP">
+        {{ $errors->first('ZIP', '<span class="help-block">:message</span>') }}
+
+            <h3>What service do you offer?</h3>    
+        <div class="radio">
+          <input type="radio" name="serviceCode" id="balloons" value="0"> Balloons <br>
+          <input type="radio" name="serviceCode" id="catering" value="1"> Catering <br>
+          <input type="radio" name="serviceCode" id="dj" value="2"> DJ <br>
+        </div>
+        
+        <button type="submit" class="pure-button pure-button-primary">Create Account</button>
+    </fieldset>
+{{ Form::close() }}
+
+        <H3>In a sentence, describe your service to potential customers</h3>
+          <textarea name="description" form="v-form"></textarea>
+ 
 
 
 @stop
