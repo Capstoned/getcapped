@@ -1,5 +1,4 @@
-     
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container">
                     <!-- Brand and toggle get grouped for better mobile display -->
                     <div class="navbar-header">
@@ -7,7 +6,7 @@
                             <span class="fa fa-bars fa-lg"></span>
                         </button>
                         <a class="navbar-brand" href="index.html">
-                            <img src="img/freeze/logo.png" alt="" class="logo">
+                            <img src="img/freeze/party-glass.png" alt="" class="logo">
                         </a>
                     </div>
 
@@ -17,17 +16,17 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li><a href="#about">about</a>
                             </li>
-                            <li><a href="#features">features</a>
+                            <li><a href="#features"><i class="fa fa-gift"></i> features</a>
                             </li>
-                            <li><a href="#reviews">reviews</a>
+                            <li><a href="#reviews"><i class="fa fa-comments"></i> reviews</a>
                             </li>
-                            <li><a href="#screens">screens</a>
-                            </li>
-                            <li><a href="#demo">demo</a>
-                            </li>
-                            <li><a class="getApp" href="#getApp">get app</a>
-                            </li>
-                            <li><a href="#support">support</a>
+                            @if(!Auth::check())
+                                <li><a class="getApp" href="#getApp"><i class="fa fa-sign-in"></i> sign up</a>
+                                </li>
+                            @else
+                                <li><a href="#">my account</a></li>
+                            @endif
+                            <li><a href="#support">contact us</a>
                             </li>
                         </ul>
                     </div>
@@ -35,5 +34,3 @@
                 </div>
                 <!-- /.container-->
         </nav>
-
-        

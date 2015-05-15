@@ -89,6 +89,34 @@ Route::get('/maxtest', function()
 
 
 
+
+
+
+
+
+
+// KB's Routes to the dashboard view
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Map rendering Route
 Route::get('/bennytest', function()
 {
