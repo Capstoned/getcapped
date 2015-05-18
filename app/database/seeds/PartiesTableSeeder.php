@@ -15,7 +15,7 @@ class PartiesTableSeeder extends Seeder {
 		$party->comments = "Its my sons 10th Birthday";
 		$party->event_date = Carbon::now()->addMonth();
 		$party->confirm_date;
-		$party->event_status = 'pending';
+		$party->event_status = 0;
 		$party->address = '2127 Madison Court';
 		$party->city = 'Gwynn Oak';
 		$party->state = 'MD';
@@ -29,7 +29,7 @@ class PartiesTableSeeder extends Seeder {
 		$party2->comments = '40 years of marriage!';
 		$party2->event_date = Carbon::now()->addDay(24);
 		$party2->confirm_date;
-		$party2->event_status = 'pending';
+		$party2->event_status = 0;
 		$party2->address = '1292 Main Street West';
 		$party2->city = 'Portage';
 		$party2->state = 'IN';
@@ -44,7 +44,7 @@ class PartiesTableSeeder extends Seeder {
 		$party3->comments = "Twins turning 8, so we're throwing a pizza party";
 		$party3->event_date = Carbon::now()->addMonth(2);
 		$party3->confirm_date;
-		$party3->event_status = 'pending';
+		$party3->event_status = 0;
 		$party3->confirm_date;
 		$party3->address = '4114 Creek Road';
 		$party3->city = 'Willingboro';
@@ -60,7 +60,7 @@ class PartiesTableSeeder extends Seeder {
 		$party4->comments = 'Bar Mitzvah for my son';
 		$party4->event_date = Carbon::now()->addDay(44);
 		$party4->confirm_date = Carbon::now()->subDay();
-		$party4->event_status = 'confirmed';
+		$party4->event_status = 0;
 		$party4->address = '965 Main Street East';
 		$party4->city = 'Sevierville';
 		$party4->state = 'TN';
@@ -76,7 +76,7 @@ class PartiesTableSeeder extends Seeder {
 		$party5->comments = 'Granny is turning 78!';
 		$party5->event_date = Carbon::now()->addDay(10);
 		$party5->confirm_date = Carbon::now();
-		$party5->event_status = 'confirmed';
+		$party5->event_status = 0;
 		$party5->address = '5030 Circle Drive';
 		$party5->city = 'Shelbyville';
 		$party5->state = 'TN';

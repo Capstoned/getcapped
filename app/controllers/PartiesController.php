@@ -1,6 +1,6 @@
 <?php
 
-class PartiesController extends \BaseController {
+class PartiesController extends BaseController {
 
 	/**
 	 * Display a listing of parties

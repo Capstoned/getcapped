@@ -7,10 +7,8 @@ class Vendor extends \Eloquent {
 
 	// Add your validation rules here
 	public static $rules = array(
-		'vendor_name'     => 'required',
-     	'email'    => 'required', //|email|unique:vendors,email',
-        'username' => 'required', //|unique:vendors,username',
-        'password' => 'required', //|min:6',
+		'vendor_name'	=> 'required',
+		'user_id'     => 'required',
         'address' => 'required',
 		'city' => 'required',
 		'state' => 'required',
@@ -21,8 +19,8 @@ class Vendor extends \Eloquent {
 
 	// Don't forget to fill this array
 
-	protected $fillable = ['vendor_name', 'username', 'email', 'password', 'address',
-							 'city', 'state', 'zip_code', 'serviceCode', 'description'];
+	protected $fillable = ['user_id','vendor_name', 'address','city', 
+						'state', 'zip_code', 'serviceCode', 'description'];
 
 
 

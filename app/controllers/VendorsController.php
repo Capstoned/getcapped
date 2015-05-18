@@ -1,6 +1,6 @@
 <?php
 
-class VendorsController extends \BaseController {
+class VendorsController extends BaseController {
 
 	/**
 	 * Display a listing of vendors
