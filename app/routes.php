@@ -64,7 +64,7 @@ Route::resource('parties', 'PartiesController');
 Route::get('/maxtest', function()
 {
 
-	
+    
 });
 
 
@@ -103,10 +103,7 @@ Route::get('/dashboard', function()
 });
 
 
-
-
-
-
+//
 
 // Confide routes
 Route::get('users/create', 'UsersController@create');
