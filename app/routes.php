@@ -63,8 +63,6 @@ Route::resource('parties', 'PartiesController');
 
 Route::get('/maxtest', function()
 {
-	// return View::make('/parties/create');
-	return View::make('vendors.vendors-dash');
 
 	
 });
@@ -96,15 +94,13 @@ Route::get('/maxtest', function()
 
 
 
-// KB's Routes to the dashboard view
 
+// KB's Routes to the dashboard view
 
 Route::get('/dashboard', function()
 {
     return View::make('dashboard');
 });
-
-
 
 
 //
@@ -120,3 +116,7 @@ Route::post('users/forgot_password', 'UsersController@doForgotPassword');
 Route::get('users/reset_password/{token}', 'UsersController@resetPassword');
 Route::post('users/reset_password', 'UsersController@doResetPassword');
 Route::get('users/logout', 'UsersController@logout');
+// Vendor dashboard and edit routes
+Route::get('/vendors/vendor-dash', 'VendorsController@showDash');
+Route::put('/vendors/vendor-dash/{id}', 'VendorsController@update');
+// User dashboard and edit routes

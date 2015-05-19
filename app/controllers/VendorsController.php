@@ -54,11 +54,18 @@ class VendorsController extends BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show()
 	{
-		$vendor = Vendor::findOrFail($id);
+		// $vendor = Vendor::findOrFail($id);
 
-		return View::make('vendors.show', compact('vendor'));
+		// return View::make('vendors.show', compact('vendor'));
+
+		$id = Auth::id();
+		// dd($id);
+		$vendor = Vendor::where('user_id', $id)->first();
+	
+		return View::make('vendors.vendors-dash')->with(['vendor'=> $vendor]);
+
 	}
 
 	/**
@@ -82,20 +89,23 @@ class VendorsController extends BaseController {
 	 */
 	public function update($id)
 	{
-		$user = User::findOrFail($id);
+		$vendor = Vendor::findOrFail($id);
 
-		$validator = Validator::make($data = Input::all(), User::$rules);
+		// $user = User::findOrFail($id);
+		$data = Input::all();
+		$validator = Validator::make($data, Vendor::$rules);
 
 		if ($validator->fails())
 		{
 			Session::flash('errorMessage', 'Post not saved');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
-
-		$user->update($data);
+		// $vendor->vendor_name = Input::get('vendor_name');
+		// $vendor->save();
+		$vendor->update($data);
 
 		Session::flash('successMessage', 'Saved successfully');
-		return Redirect::route('users.index');
+		return Redirect::back()->withInput();
 	}
 
 	/**
@@ -111,4 +121,12 @@ class VendorsController extends BaseController {
 		return Redirect::route('vendors.index');
 	}
 
+	public function showDash()
+	{
+		$id = Auth::id();
+		dd($id);
+		$vendor = Vendor::where('user_id', $id)->first();
+	
+		return View::make('vendors.vendors-dash')->with(['vendor'=> $vendor]);
+	}
 }
