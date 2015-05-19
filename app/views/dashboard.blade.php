@@ -28,7 +28,7 @@
 
     <div class="pre-loader">
         <div class="load-con">
-            <img src="img/freeze/logo.png" class="animated fadeInDown" alt="">
+            <img src="img/freeze/party-glass.png" class="animated fadeInDown" alt="">
             <div class="spinner">
               <div class="bounce1"></div>
               <div class="bounce2"></div>
@@ -39,12 +39,10 @@
    
     <header>
 @include('partials.navbar')
-        
+
 <!-- change from img to background image for this div -->
     <section id="section-one">
-        <div class="dash-header">
-            <img src="/img/freeze/bk-freeze.jpg">
-        </div>
+
         <div id="calendar">
         <div id="mini-clndr">
     <script id="calendar-template" type="text/template">
@@ -62,30 +60,47 @@
       </div>
     </script>
     </div>
+  </div>
     </section>
 <!-- This is the div for the calendar, #mini-clndr -->
     
 
-    <section id="section3">
-        <div id="weather">
-        <!-- This is the div for the weather -->
+    <section id="section-two">
+        <h1 class="weather-title">Weather <i class="fa fa-picture-o"></i></h1>
+    <div class="container">
+      <div id="city"></div>
+      <h2>Today's Weather</h2>
+
+      <div id="weather"></div>
+
+      <div class ="container-fluid">
+      
+          <div class="row">
+          <h2>3 Day Forecast</h2>
+
+              <div id="forecast"></div>
+
+
+          </div>
         </div>
     </section>
 
-    <section id="section-four">
+    <section id="section-three">
         <div id="map">
         <!-- This is the div for the map -->
         </div>
     </section>
 
-    <section>
         @include('partials.footer')
-    </section>
 
 <script src="/js/jquery-1.10.2.js"></script>
 <script src="/js/moment.js"></script>
 <script src="/js/underscore.js"></script>
 <script src="/js/calendar.js"></script>
+
+
+
+<script src="js/js_ajax_weather.js"></script>
 
 <script>
   var currentMonth = moment().format('YYYY-MM');

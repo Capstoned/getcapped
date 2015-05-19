@@ -64,7 +64,7 @@ Route::resource('parties', 'PartiesController');
 Route::get('/maxtest', function()
 {
 
-	
+    
 });
 
 
