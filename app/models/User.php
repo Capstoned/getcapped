@@ -1,13 +1,11 @@
 <?php
 
-use Illuminate\Auth\UserTrait;
-use Illuminate\Auth\UserInterface;
-use Illuminate\Auth\Reminders\RemindableTrait;
-use Illuminate\Auth\Reminders\RemindableInterface;
+use Zizaco\Confide\ConfideUser;
+use Zizaco\Confide\ConfideUserInterface;
 
-class User extends Eloquent implements UserInterface, RemindableInterface {
-
-	use UserTrait, RemindableTrait;
+class User extends Eloquent implements ConfideUserInterface
+{
+    use ConfideUser;
 
 	/**
 	 * The database table used by the model.
@@ -16,7 +14,7 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $table = 'users';
 
-	protected $fillable = ['username', 'email', 'password'];
+	protected $fillable = ['user_type','email', 'password'];
 
 	/**
 	 * The attributes excluded from the model's JSON form.
@@ -31,17 +29,13 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	*@return hashed string
 	*/
 
-	// Hashing passwords
-	public function setPasswordAttribute($value)
-	{
-	    $this->attributes['password'] = Hash::make($value);
-	}
 
-	// Lowercasing usernames for convention
-	public function setUsernameAttribute($value)
-    {
-        $this->attributes['username'] = strtolower($value);
-    }
+
+	// // Lowercasing usernames for convention
+	// public function setUsernameAttribute($value)
+ //    {
+ //        $this->attributes['username'] = strtolower($value);
+ //    }
 
     // Establishing one-to-many model relationship
     public function parties()
@@ -52,7 +46,6 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	// Validation rules for storing new users
 	public static $rules = array(
      	'email'    => 'required|email|unique:users,email',
-        'username' => 'required|unique:users,username',
         'password' => 'required|min:6'
     );
 
