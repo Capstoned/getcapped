@@ -39,7 +39,7 @@
    
     <header>
 @include('partials.navbar')
-        
+
 <!-- change from img to background image for this div -->
     <section id="section-one">
 
@@ -97,6 +97,7 @@
 <script src="/js/moment.js"></script>
 <script src="/js/underscore.js"></script>
 <script src="/js/calendar.js"></script>
+
 
 
 <script src="js/js_ajax_weather.js"></script>
