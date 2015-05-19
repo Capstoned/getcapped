@@ -1,6 +1,6 @@
 <?php
 
-class PartiesController extends \BaseController {
+class PartiesController extends BaseController {
 
 	/**
 	 * Display a listing of parties
@@ -85,6 +85,8 @@ class PartiesController extends \BaseController {
 		{
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
+
+		
 
 		$party->update($data);
 

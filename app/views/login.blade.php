@@ -12,6 +12,12 @@
                     'method' => 'post',
                     'class' => 'pure-form')) }}
 <fieldset>
+    {{Form::label('userType', "Select Login Type")}}
+    <br>
+    {{Form::radio('userType', "Customer")}}
+    <br>
+    {{Form::radio('userType', "Vendor")}}
+    <br>
     {{ Form::label ('email_or_username', 'Email or Username')}}
     <br>
     {{ Form::text ('email_or_username', Input::old('email_or_username')) }}

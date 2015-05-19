@@ -16,14 +16,13 @@ class CreateVendorsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->string('vendor_name')->unique();
-			$table->string('username')->unique();
-			$table->string('email')->unique();
-			$table->string('password');
+			$table->integer('user_id')->unsigned();
+			$table->foreign('user_id')->references('id')->on('users');
 			$table->string('address');
 			$table->string('city');
 			$table->string('state');
 			$table->string('zip_code');
-			$table->integer('serviceCode');
+			$table->enum('service_code', array('0', '2'));
 			$table->text('description');
 			$table->timestamps();
 			$table->rememberToken();
