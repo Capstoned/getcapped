@@ -86,6 +86,8 @@ class PartiesController extends BaseController {
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 
+		
+
 		$party->update($data);
 
 		return Redirect::route('parties.index');
