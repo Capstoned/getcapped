@@ -396,7 +396,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4" >
-                        <img src="img/freeze/iphone-freeze.png" class="img-responsive scrollpoint sp-effect5" alt="">
+                        <img src="img/freeze/screens/placeholder.png" class="img-responsive scrollpoint sp-effect5" alt="">
                     </div>
                     <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
                         <div class="media feature">
@@ -444,13 +444,13 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="platforms">
-                            <a href="#" class="btn btn-primary inverse scrollpoint sp-effect1">
+                            <a href="/users/create" class="btn btn-primary inverse scrollpoint sp-effect1">
                                 <i class="fa fa-user fa-3x pull-left"></i>
                                 <span>Sign Up As A</span><br>
                                 <b>User</b>
                             </a>
                             
-                                <a href="#" class="btn btn-primary inverse scrollpoint sp-effect2">
+                                <a href="/users/create" class="btn btn-primary inverse scrollpoint sp-effect2">
                                     <i class="fa fa-user fa-3x pull-left"></i>
                                     <span>Sign Up As A</span><br>
                                     <b>Vendor</b>

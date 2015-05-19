@@ -6,7 +6,7 @@
                             <span class="fa fa-bars fa-lg"></span>
                         </button>
                         <a class="navbar-brand" href="/">
-                            <img src="img/freeze/party-glass.png" alt="" class="logo">
+                            <img src="/img/freeze/party-glass.png" alt="" class="logo">
                         </a>
                     </div>
 
