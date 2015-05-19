@@ -1,3 +1,33 @@
 section#getApp {
   background: url("../img/freeze/Slides/party-bg.jpg");
 }
+
+/*.partytype{
+    float:left;
+  }
+.service{
+    float: left;
+    padding-left: 40px;
+  }
+.spacer {
+    padding-top: 200px;
+  }*/
+.signup-form{
+    padding-top: 300px;
+}
+/*h1{
+    color: #fff;
+}*/
+
+.devs{
+    padding-left: 200px;
+}
+.btn.btn-primary.inverse {
+  color: #000;
+  border-color: #ffffff;
+}
+.btn.btn-primary.inverse:hover {
+  color: #fff;
+  background: #66cdcc;
+  border-color: #66cdcc;
+}

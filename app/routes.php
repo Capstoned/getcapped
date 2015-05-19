@@ -97,7 +97,11 @@ Route::get('/maxtest', function()
 
 // KB's Routes to the dashboard view
 
-
+Route::get('/dashboard', function()
+{
+    return View::make('dashboard');
+    
+});
 
 
 

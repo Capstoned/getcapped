@@ -1,8 +1,14 @@
-body{
-    /*background-color: #2F2F4F;*/
-    background-image: url();
-    border: 3px solid #fff;
+#calendar{
+    padding-top: 350px;
+    padding-left: 950px;
 }
-#section-three{
-    width: 100%
+#section-two{
+    background-image: url("/img/freeze/bk-freeze.jpg");
 }
+.weather-title{
+    text-align: center;
+}
+
+/*h1{
+    color: #fff;
+}*/
