@@ -88,20 +88,23 @@
     <section id="section-three">
         <div id="map">
         <!-- This is the div for the map -->
-        {{-- @include('partials.map') --}}
+        @include('partials.map')
         </div>
     </section>
 
         @include('partials.footer')
 
-<script src="/js/jquery-1.10.2.js"></script>
+<script src="/js/jquery-1.11.1.min.js"></script>
+<script src="/js/slick.min.js"></script>
+<script src="/js/waypoints.min.js"></script>
+<script src="/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
 <script src="/js/moment.js"></script>
 <script src="/js/underscore.js"></script>
 <script src="/js/calendar.js"></script>
 
 
 
-<script src="js/js_ajax_weather.js"></script>
+<script src="/js/js_ajax_weather.js"></script>
 
 <script>
   var currentMonth = moment().format('YYYY-MM');
