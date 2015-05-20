@@ -61,9 +61,10 @@ Route::resource('parties', 'PartiesController');
 
 // TEST ROUTES FOR MAX / KB / BENNY
 
-Route::get('/maxtest', function()
+Route::get('/users/users-dash', function()
 {
 
+	return View::make('users/users-dash');
 	
 });
 
