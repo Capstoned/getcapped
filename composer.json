@@ -1,4 +1,4 @@
-{
+	{
 	"name": "laravel/laravel",
 	"description": "The Laravel Framework.",
 	"keywords": ["framework", "laravel"],
@@ -11,7 +11,6 @@
 		"esensi/model": "0.3.*",
 		"guzzlehttp/guzzle": "~4.0",
 		"zizaco/entrust": "1.2.*@dev"
-		
 	},
 	"require-dev":{
 		"barryvdh/laravel-debugbar": "~1.8",

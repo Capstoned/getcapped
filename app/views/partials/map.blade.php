@@ -14,87 +14,106 @@
 
 </head>
 
-
 <p>
-
-
-
-
+    {{$party->address}}
+    {{$party->city}}
+    {{$party->state}}
+    {{$party->zip_code}}
 </p>
 
 
 
-{{-- $address = Get::address
-
-var adress = $address --}}
-
 <body>
 <h1>Here's the map page</h1>
 
+
 <div id="map" ></div>
 
-{{-- Need to change key, Location and getElementById --}}
-
+<!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfixW9mRbDZRsuVyCOlYkNAbG9O46IILs"></script>
 
-    <script>
-        var address = "<?php echo $parties->address ?>";
-        
-        // Geocoder.geocode(address);
-        console.log(address);
+  <!-- Script to show address on map -->
 
-        var initialLocation;
-        var sanantonio = new google.maps.LatLng(29.424122, -98.493628);
-        var browserSupportFlag =  new Boolean();
+  <script type="text/javascript">
 
-        function initialize() {
-          var myOptions = {
-            zoom: 10,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
-          };
-          var map = new google.maps.Map(document.getElementById("map"), myOptions);
+// Render the map
+// var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-          if(navigator.geolocation) {
-            browserSupportFlag = true;
-            navigator.geolocation.getCurrentPosition(function(position) {
-              initialLocation = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
-              map.setCenter(initialLocation);
-              var marker = new google.maps.Marker({
-                  position: initialLocation,
-                  map: map,
-                  animation: google.maps.Animation.DROP
-                });
-            }, function() {
-              handleNoGeolocation(browserSupportFlag);
-            });
-          }
-          else {
-            browserSupportFlag = false;
-            handleNoGeolocation(browserSupportFlag);
-          }
+// GOOD CODE SECTION
+    var address = '{{$party->address}}, {{$party->city}}, {{$party->state}}, {{$party->zip_code}}';
+    console.log(address);
 
-          function handleNoGeolocation(errorFlag) {
-            if (errorFlag == true) {
-              alert("Geolocation service failed.");
-              initialLocation = sanantonio;
-              var marker = new google.maps.Marker({
-                  position: initialLocation,
-                  map: map
-                });
-            } else {
-              alert("Your browser doesn't support geolocation. We've placed you in San Antonio.");
-              initialLocation = sanantonio;
-              var marker = new google.maps.Marker({
-                  position: initialLocation,
-                  map: map
-                });
-            }
-            map.setCenter(initialLocation);
-          }
-        }
-        initialize();
-    </script>
+    var geocoder = new google.maps.Geocoder();
+    var latitude;
+    var longitude;
+    geocoder.geocode( { 'address': address}, function(results, status) {
 
+    // Check for a successful result
+    if (status == google.maps.GeocoderStatus.OK) {
+        // console.log(results);
+        latitude = results[0].geometry.location.A;
+        longitude = results[0].geometry.location.F;
+    } else {
+        // Show an error message with the status if our request fails
+        alert("Geocoding was not successful - STATUS: " + status);
+    }
+
+    // Set our map options
+    var mapOptions = {
+      // This sets the center of the map at our location
+      // center: results[0].geometry.location,
+      center: { lat: latitude, lng: longitude },
+      // Set the zoom level
+      zoom: 11,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+
+      };
+
+
+      map = new google.maps.Map(document.getElementById("map"), mapOptions);
+      map.setTilt(45);
+      map.setHeading(90);
+
+//  // Render the map
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    // Create lat and long for our marker position
+    var partyMarker = { lat: latitude, lng: longitude };
+
+    //Image for marker
+    var image = "/img/balloon.png"
+
+    // Add the marker to our existing map
+    var marker = new google.maps.Marker({
+      position: partyMarker,
+      map: map,
+      icon: image,
+      animation: google.maps.Animation.DROP,
+
+    });
+
+    // WINDOW
+    // Create a new infoWindow object with content
+    var infowindow = new google.maps.InfoWindow({
+      content: 'Party Location'
+    });
+
+// Open the window using our map and marker
+infowindow.open(map,marker);
+
+});
+
+
+    // // Create a new infoWindow object with content
+    // var infowindow = new google.maps.InfoWindow({
+    //     content: 'Changing the world, one programmer at a time.'
+    // });
+
+    // // Open the window using our map and marker
+    // infowindow.open(map,marker);
+
+
+  </script>
 </body>
 </html>
 
