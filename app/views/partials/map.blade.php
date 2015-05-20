@@ -5,12 +5,6 @@
     {{$party->zip_code}}
 </p>
 
-<<<<<<< HEAD
-
-
-<body>
-=======
->>>>>>> master
 <h1>Here's the map page</h1>
 
 
