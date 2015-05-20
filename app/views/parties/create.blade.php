@@ -1,4 +1,4 @@
-@section('content')
+
 
 <style type="text/css">
   .partytype{
@@ -10,11 +10,11 @@
   }
 
   .spacer {
-    padding-top: 200px;
+    padding-top: 300px;
   }
 </style>
 
-<body>
+
 
 {{-- 'party_type' => 'required',
 		'address' => 'required',
@@ -29,26 +29,31 @@ public static $partyTypes = ['0' => 'childBday',
 						'3' => 'other']; --}}
 
 {{-- <div class ="spacer"></div> --}}
-{{Form::open(array('method' => 'POST', 'action' => 'PartiesController@store', 'class' => 'pure-form spacer'))}}
+
+{{Form::open(array('method' => 'POST', 'action' => 'PartiesController@store', 'class' => 'pure-form spacer form-box-two'))}}
 
 {{Form::hidden('user_id', Auth::id())}}
 
 
-{{ Form::label ('party_type', 'Select Your Party Type')}}
-<br>
 
-{{Form::radio('party_type', '0')}} Child's Birthday 
+
+
+{{ Form::label ('party_type', 'Select Your Party Type')}}
+<h2> Select Your Party Type</h2>
+
+
+{{Form::radio('party_type', '0')}} Child's Birthday
 <br>
-{{Form::radio('party_type', '1')}} Anniversary      
+{{Form::radio('party_type', '1')}} Anniversary
 <br>
-{{Form::radio('party_type', '2')}} Adult's Birthday 
+{{Form::radio('party_type', '2')}} Adult's Birthday
 <br>
-{{Form::radio('party_type', '3')}} Other            
+{{Form::radio('party_type', '3')}} Other
 <br>
 
 
 {{ Form::label ('service_code', 'Select Desired Services')}}
-<br>
+<h2> Select Desired Services</h2>
 
 {{Form::checkbox('service_code', '0')}} Balloons
 <br>
@@ -60,7 +65,7 @@ public static $partyTypes = ['0' => 'childBday',
 
 
 {{ Form::label ('address', 'Select Party Location')}}
-<br>
+<h2> Select Party Location</h2>
 
 {{ Form::label ('address', 'Address')}}
 <br>
@@ -95,4 +100,3 @@ public static $partyTypes = ['0' => 'childBday',
 
 
 
-</body>

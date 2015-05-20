@@ -76,7 +76,7 @@
     // WINDOW
     // Create a new infoWindow object with content
     var infowindow = new google.maps.InfoWindow({
-      content: 'Party Location'
+      content: 'Party Location: ' + address
     });
 
 // Open the window using our map and marker
