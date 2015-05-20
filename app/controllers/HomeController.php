@@ -44,3 +44,15 @@ class HomeController extends BaseController {
 	{
 		return View::make('user-dash');
 	}
+
+
+	public function showDashboard()
+	{
+	    $party = Party::all()->random();
+		return View::make('dashboard')->with('party', $party);
+	}
+
+
+
+
+
