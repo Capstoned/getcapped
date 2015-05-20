@@ -17,7 +17,7 @@
 
 <p>
 
-{{$party->address}}
+
 
 
 </p>
@@ -38,7 +38,7 @@ var adress = $address --}}
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfixW9mRbDZRsuVyCOlYkNAbG9O46IILs"></script>
 
     <script>
-        var address = "<?php echo $party->address ?>";
+        var address = "<?php echo $parties->address ?>";
         
         // Geocoder.geocode(address);
         console.log(address);

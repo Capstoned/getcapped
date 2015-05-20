@@ -37,3 +37,10 @@ section#getApp {
     background-image: url('/img/freeze/bk-freeze-ga.jpg');
     color: #fff;
 }
+.form-box-two{
+    padding-top: 300px;
+    padding-left: 150px;
+/*    padding-right: 40px;
+*/    background-image: url('/img/freeze/bk-freeze.jpg');
+    color: #fff;
+}
