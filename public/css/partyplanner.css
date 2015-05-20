@@ -44,3 +44,14 @@ section#getApp {
 */    background-image: url('/img/freeze/bk-freeze.jpg');
     color: #fff;
 }
+.partytype{
+    float:left;
+  }
+  .service{
+    float: left;
+    padding-left: 40px;
+  }
+
+  .spacer {
+    padding-top: 300px;
+  }
