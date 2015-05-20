@@ -1,7 +1,4 @@
-@extends('layouts.master')
 
-
-@section('content')
 
 <div id="formwidth">
 
@@ -11,9 +8,10 @@
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Create Party</a></li>
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Manage Party</a></li>
             <li class="pure-menu-item"><a href="#" class="pure-menu-link">Confirmed Parties</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">Logout</a></li>
+
         </ul>
     </div>
 
 </div>
 
-@stop

@@ -88,7 +88,7 @@
     <section id="section-three">
         <div id="map">
         <!-- This is the div for the map -->
-        @include('partials.map')
+        {{-- @include('partials.map') --}}
         </div>
     </section>
 
