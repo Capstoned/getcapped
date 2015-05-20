@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/slick.css">
     <link rel="stylesheet" href="/js/rs-plugin/css/settings.css">
-
+    
     <link rel="stylesheet" href="/css/freeze.css">
 {{--     <link rel="stylesheet" href="/css/style.css">
  --}}

@@ -35,35 +35,35 @@ class PartiesController extends BaseController {
 
 		if ($validator->fails())
 		{
+			dd($data);
 			Session::flash('errorMessage', 'Post not saved');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
-		// dd($data);
-		// Party::create($data);
-
-		$party = new Party();
-		$party->user_id = Input::get('user_id');
-		$party->party_type = Input::get('party_type');
-		$party->comments = Input::get('comments');
-		$party->event_date = Input::get('event_date');
-		$party->event_status = 0;
-		$party->address = Input::get('address');
-		$party->city = Input::get('city');
-		$party->state = Input::get('state');
-		$party->zip_code = Input::get('zip_code');
-		$party->save();
-
-		$serviceTypes = Input::get('service_type');
-
-		foreach ($serviceTypes as $serviceType)
-		{
-			$party->services()->attach($serviceType);
-
-		};
-
-		Session::flash('successMessage', 'Saved successfully');
-		return Redirect::back()->withInput();
-		// return Redirect::route('/');
+		
+			$party = new Party();
+			$party->user_id = Input::get('user_id');
+			$party->party_type = Input::get('party_type');
+			$party->comments = Input::get('comments');
+			$party->event_date = Input::get('event_date');
+			$party->event_status = 0;
+			$party->address = Input::get('address');
+			$party->city = Input::get('city');
+			$party->state = Input::get('state');
+			$party->zip_code = Input::get('zip_code');
+			$party->save();
+	
+			$serviceTypes = Input::get('service_id');
+			
+			// dd($serviceTypes);
+			foreach ($serviceTypes as $serviceType)
+			{
+				$party->services()->attach($serviceType);
+	
+			};
+	
+			Session::flash('successMessage', 'Saved successfully');
+			return Redirect::back()->withInput();
+			// return Redirect::route('/');
 	}
 
 	/**

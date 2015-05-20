@@ -91,7 +91,6 @@ class VendorsController extends BaseController {
 	{
 		$vendor = Vendor::findOrFail($id);
 
-		// $user = User::findOrFail($id);
 		$data = Input::all();
 		$validator = Validator::make($data, Vendor::$rules);
 
@@ -100,8 +99,7 @@ class VendorsController extends BaseController {
 			Session::flash('errorMessage', 'Post not saved');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
-		// $vendor->vendor_name = Input::get('vendor_name');
-		// $vendor->save();
+		
 		$vendor->update($data);
 
 		Session::flash('successMessage', 'Saved successfully');
