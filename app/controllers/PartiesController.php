@@ -106,4 +106,5 @@ class PartiesController extends BaseController {
 		return Redirect::route('parties.index');
 	}
 
+
 }

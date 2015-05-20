@@ -1,19 +1,3 @@
-<!DOCTYPE html>
-
-<html>
-
-<head>
-    <title>http://planner.dev/*</title>
-
-    <style type="text/css">
-        #map{
-            height: 500px;
-            width: 500px;
-        }
-    </style>
-
-</head>
-
 <p>
     {{$party->address}}
     {{$party->city}}
@@ -21,7 +5,6 @@
     {{$party->zip_code}}
 </p>
 
-<body>
 <h1>Here's the map page</h1>
 
 <div id="map" ></div>
@@ -61,7 +44,7 @@
       // center: results[0].geometry.location,
       center: { lat: latitude, lng: longitude },
       // Set the zoom level
-      zoom: 11,
+      zoom: 13,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
 
       };
@@ -109,6 +92,5 @@ infowindow.open(map,marker);
     // infowindow.open(map,marker);
 
   </script>
-</body>
-</html>
+
 
