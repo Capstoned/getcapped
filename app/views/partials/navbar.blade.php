@@ -5,7 +5,7 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="fa fa-bars fa-lg"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="/">
                             <img src="img/freeze/party-glass.png" alt="" class="logo">
                         </a>
                     </div>
@@ -14,19 +14,19 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#about">about</a>
-                            </li>
-                            <li><a href="#features"><i class="fa fa-gift"></i> features</a>
+                            <li><a href="#about"><i class="fa fa-glass"></i> about</a>
                             </li>
                             <li><a href="#reviews"><i class="fa fa-comments"></i> reviews</a>
+                            </li>
+                            <li><a href="#features"><i class="fa fa-gift"></i> features</a>
                             </li>
                             @if(!Auth::check())
                                 <li><a class="getApp" href="#getApp"><i class="fa fa-sign-in"></i> sign up</a>
                                 </li>
                             @else
-                                <li><a href="#">my account</a></li>
+                                <li><a href="#"><i class="fa fa-archive"></i> my account</a></li>
                             @endif
-                            <li><a href="#support">contact us</a>
+                            <li><a href="#support"><i class="fa fa-envelope"></i> contact us</a>
                             </li>
                         </ul>
                     </div>
