@@ -16,7 +16,7 @@ class Party extends \Eloquent {
 		'state' => 'required',
 		'zip_code' => 'required',
 		'event_date' => 'required',
-		'service_type' => 'required'
+		'service_id' => 'required'
 	];
 
 	// Don't forget to fill this array
@@ -40,6 +40,11 @@ class Party extends \Eloquent {
 
 	public function services()
 	{
-		return $this->belongsToMany('Party');
+		return $this->belongsToMany('Service');
+	}
+	
+	public function getDates()
+	{
+	    return array('created_at', 'updated_at', 'event_date');
 	}
 }

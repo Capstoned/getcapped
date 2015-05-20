@@ -16,19 +16,6 @@
 
 <body>
 
-{{-- 'party_type' => 'required',
-		'address' => 'required',
-		'city' => 'required',
-		'state' => 'required',
-		'zip_code' => 'required',
-		'event_date' => 'required'
-
-public static $partyTypes = ['0' => 'childBday', 
-						'1' => 'anniversary', 
-						'2' => 'adultBday', 
-						'3' => 'other']; --}}
-
-{{-- <div class ="spacer"></div> --}}
 {{Form::open(array('method' => 'POST', 'action' => 'PartiesController@store', 'class' => 'pure-form spacer'))}}
 
 {{Form::hidden('user_id', Auth::id())}}
@@ -46,15 +33,18 @@ public static $partyTypes = ['0' => 'childBday',
 {{Form::radio('party_type', '3')}} Other            
 <br>
 
-
-{{ Form::label ('service_code', 'Select Desired Services')}}
+{{ Form::label ('event_date', 'Select Your Party Date')}}
+{{ Form::input('date', 'event_date', null, array())}}
 <br>
 
-{{Form::checkbox('service_code', '0')}} Balloons
+{{ Form::label ('service_id', 'Select Desired Services')}}
 <br>
-{{Form::checkbox('service_code', '1')}} DJ
+
+{{Form::checkbox('service_id[]', '1')}} Balloons
 <br>
-{{Form::checkbox('service_code', '2')}} Catering
+{{Form::checkbox('service_id[]', '2')}} DJ
+<br>
+{{Form::checkbox('service_id[]', '3')}} Catering
 <br>
 
 
@@ -64,22 +54,22 @@ public static $partyTypes = ['0' => 'childBday',
 
 {{ Form::label ('address', 'Address')}}
 <br>
-{{Form::text('address', 'Address')}}
+{{Form::text('address', null, array('placeholder' =>'Address'))}}
 <br>
 
 {{ Form::label ('city', 'City')}}
 <br>
-{{Form::text('city', 'City')}}
+{{Form::text('city', null, array('placeholder' =>'City'))}}
 <br>
 
 {{ Form::label ('state', 'State')}}
 <br>
-{{Form::text('state', 'State')}}
+{{Form::text('state', null, array('placeholder' =>'State'))}}
 <br>
 
 {{ Form::label ('zip_code', 'Zip Code')}}
 <br>
-{{Form::text('zip_code', 'Zip')}}
+{{Form::text('zip_code', null, array('placeholder' =>'ZIP Code'))}}
 <br>
 
 {{ Form::label ('comments', 'Comments')}}
