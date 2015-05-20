@@ -10,11 +10,13 @@ class Party extends \Eloquent {
 	// Add your validation rules here
 	public static $rules = [
 		'party_type' => 'required',
+		'user_id' => 'required',
 		'address' => 'required',
 		'city' => 'required',
 		'state' => 'required',
 		'zip_code' => 'required',
-		'event_date' => 'required'
+		'event_date' => 'required',
+		'service_type' => 'required'
 	];
 
 	// Don't forget to fill this array
@@ -27,10 +29,17 @@ class Party extends \Eloquent {
 						'2' => 'adultBday', 
 						'3' => 'other'];
 
+
+
 	
 	// Many to many model relationship				
 	public function vendors()
 	{
 		return $this->belongsToMany('Vendor');
+	}
+
+	public function services()
+	{
+		return $this->belongsToMany('Party');
 	}
 }
