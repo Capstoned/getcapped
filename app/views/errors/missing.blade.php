@@ -1,11 +1,11 @@
-@extends('layouts.master')
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Error-Not Found</title>
+</head>
+<body>
+    <h1>Ooops!! There's no content here.</h1>
 
-@section('content')
+</body>
+</html>
 
-
-
-<div>
-	
-		{{-- <img src="/images/404.jpg"> --}}
-</div>
-@stop

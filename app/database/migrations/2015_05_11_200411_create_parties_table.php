@@ -17,7 +17,7 @@ class CreatePartiesTable extends Migration {
 			$table->increments('id');
 			$table->integer('user_id')->unsigned();
 			$table->foreign('user_id')->references('id')->on('users');
-			$table->string('party_type');
+			$table->enum('party_type', array('0','3'));
 			$table->text('comments')->nullable();
 			$table->string('address');
 			$table->string('city');
@@ -25,7 +25,7 @@ class CreatePartiesTable extends Migration {
 			$table->string('zip_code');
 			$table->dateTime('event_date');
 			$table->dateTime('confirm_date')->nullable();
-			$table->string('event_status');
+			$table->enum('event_status', array('0','3'));
 			$table->timestamps();
 		});
 	}

@@ -55,7 +55,7 @@
                         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                             <span class="fa fa-bars fa-lg"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html">
+                        <a class="navbar-brand" href="/">
                             <img src="img/freeze/party-glass.png" alt="" class="logo">
                         </a>
                     </div>
@@ -64,19 +64,19 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#about">about</a>
-                            </li>
-                            <li><a href="#features"><i class="fa fa-gift"></i> features</a>
+                            <li><a href="#about"><i class="fa fa-glass"></i> about</a>
                             </li>
                             <li><a href="#reviews"><i class="fa fa-comments"></i> reviews</a>
                             </li>
+                            <li><a href="#features"><i class="fa fa-gift"></i> features</a>
+                            </li>
                             @if(!Auth::check())
-                                <li><a class="getApp" href="#getApp"><i class="fa fa-sign-in"></i> sign up</a>
+                                <li><a class="getApp" href="#getApp"><i class="fa fa-sign-in"></i> sign in</a>
                                 </li>
                             @else
-                                <li><a href="#">my account</a></li>
+                                <li><a href="#"><i class="fa fa-archive"></i> my account</a></li>
                             @endif
-                            <li><a href="#support">contact us</a>
+                            <li><a href="#support"><i class="fa fa-envelope"></i> contact us</a>
                             </li>
                         </ul>
                     </div>
@@ -154,7 +154,7 @@
 
                         
                         <div class="tp-caption large_white_light sft" data-x="center" data-y="250" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1400" data-easing="Power4.easeOut">
-                            Every Party <i class="fa fa-glass"></i>
+                            Every Party <i class="fa fa-heart"></i>
                         </div>
                         
                         
@@ -189,7 +189,7 @@
                             data-speed="1000"
                             data-start="700"
                             data-easing="Power4.easeOut">
-                            <img src="img/freeze/Slides/family-freeze.png" alt="">
+                            <img src="img/freeze/Slides/kids-party-setting.jpg" alt="">
                         </div>
 
                         <div class="tp-caption lfb visible-xs" data-x="center" data-y="center" data-hoffset="0" data-voffset="400" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
@@ -274,7 +274,7 @@
                 <div class="section-heading inverse scrollpoint sp-effect3">
                     <h1>Reviews</h1>
                     <div class="divider"></div>
-                    <p>Read What's The People Are Saying About Us</p>
+                    <p>Read What People Are Saying About Us</p>
                 </div>
                 <div class="row">
                     <div class="col-md-10 col-md-push-1 scrollpoint sp-effect3">
@@ -288,7 +288,7 @@
                                     </div>
                                     <div class="col-md-10">
                                         <div class="review-comment">
-                                            <h3>“I love Party Planner, I highly recommend it. Simple, elegant, whimsical parties are just a few clicks away. Everyone party host should try it now.”</h3>
+                                            <h3>“I love Party Planner, I highly recommend it. Simple, elegant, whimsical parties are just a few clicks away. Every party host should try it now.”</h3>
                                             <p>
                                                 - Krin Fox
                                                 <span>
@@ -312,7 +312,7 @@
                                     </div>
                                     <div class="col-md-10">
                                         <div class="review-comment">
-                                            <h3>“Party Planner is the best event planning service I have ever experienced. It's as easy as signing up and you're already half of the way to a smashing party!”</h3>
+                                            <h3>“Party Planner is the best event planning service I have ever experienced. It's as easy as signing up and you're already half way to a smashing party!”</h3>
                                             <p>
                                                 - Theodore Willis
                                                 <span>
@@ -362,7 +362,7 @@
                 <div class="section-heading scrollpoint sp-effect3">
                     <h1>Features</h1>
                     <div class="divider"></div>
-                    <p>Learn more about the easiest way to create memorale events</p>
+                    <p>Learn more about the easiest way to create memorable events</p>
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-sm-4 scrollpoint sp-effect1">
@@ -443,9 +443,6 @@
                 
                 <div class="row">
                     <div class="col-md-12">
-                        <div class="hanging-phone scrollpoint sp-effect2 hidden-xs">
-                            <img src="img/freeze/freeze-angled2.png" alt="">
-                        </div>
                         <div class="platforms">
                             <a href="#" class="btn btn-primary inverse scrollpoint sp-effect1">
                                 <i class="fa fa-user fa-3x pull-left"></i>
@@ -468,36 +465,10 @@
             </div>
         </section>
 
-        <section id="screens">
-            <div class="container">
-
-                <div class="section-heading scrollpoint sp-effect3">
-                    <h1>The Dev Team</h1>
-                    <div class="divider"></div>
-                    <p>Meet the wonderful team behind Party Planner</p>
-                </div>
-
-                <div class="slider filtering scrollpoint sp-effect5" >
-                    <div class="one">
-                        <img src="img/freeze/screens/profile.jpg" alt="">
-                        <h4>Profile Page</h4>
-                    </div>
-                    <div class="two">
-                        <img src="img/freeze/screens/menu.jpg" alt="">
-                        <h4>Toggel Menu</h4>
-                    </div>
-                    <div class="three">
-                        <img src="img/freeze/screens/weather.jpg" alt="">
-                        <h4>Weather Forcast</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <section id="support" class="doublediagonal">
             <div class="container">
                 <div class="section-heading scrollpoint sp-effect3">
-                    <h1>Support</h1>
+                    <h1>Contact Us</h1>
                     <div class="divider"></div>
                     <p>For more info and support, contact us!</p>
                 </div>
@@ -524,7 +495,7 @@
                                         <i class="fa fa-map-marker fa-2x"></i>
                                     </a>
                                     <div class="media-body">
-                                        <h4 class="media-heading">4, Some street, California, USA</h4>
+                                        <h4 class="media-heading">112 E. Pecan, San Antonio, TX</h4>
                                     </div>
                                 </div>
                                 <div class="media">
@@ -533,7 +504,7 @@
                                     </a>
                                     <div class="media-body">
                                         <h4 class="media-heading">
-                                            <a href="mailto:support@oleose.com">support@oleose.com</a>
+                                            <a href="mailto:support@oleose.com">support@partyplanner.com</a>
                                         </h4>
                                     </div>
                                 </div>
@@ -542,7 +513,7 @@
                                         <i class="fa fa-phone fa-2x"></i>
                                     </a>
                                     <div class="media-body">
-                                        <h4 class="media-heading">+1 234 567890</h4>
+                                        <h4 class="media-heading">+1 210 567890</h4>
                                     </div>
                                 </div>
                             </div>
@@ -552,18 +523,44 @@
             </div>
         </section>
 
+        <section id="screens">
+            <div class="container">
+
+                <div class="section-heading scrollpoint sp-effect3">
+                    <h1>The Dev Team <i class="fa fa-users"></i></h1>
+                    <div class="divider"></div>
+                    <p>Meet the wonderful team behind Party Planner</p>
+                </div>
+
+                <div class="devs slider filtering scrollpoint sp-effect5" >
+                    <div class="one">
+                        <img src="img/freeze/screens/placeholder.png" alt="">
+                        <h4>Max Mayfield</h4>
+                    </div>
+                    <div class="two">
+                        <img src="img/freeze/screens/placeholder.png" alt="">
+                        <h4>Keyasha Brothern</h4>
+                    </div>
+                    <div class="three">
+                        <img src="img/freeze/screens/placeholder.png" alt="">
+                        <h4>Benito Cardenas</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <footer>
             <div class="container">
-                <a href="#" class="scrollpoint sp-effect3">
-                    <img src="img/freeze/logo.png" alt="" class="logo">
+                <a href="/" class="scrollpoint sp-effect3">
+                    <img src="img/freeze/party-glass.png" alt="" class="logo">
                 </a>
                 <div class="social">
-                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
-                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-google-plus fa-lg"></i></a>
-                    <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
+                    <a class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
+                    <a class="scrollpoint sp-effect3"><i class="fa fa-google-plus fa-lg"></i></a>
+                    <a class="scrollpoint sp-effect3"><i class="fa fa-facebook fa-lg"></i></a>
                 </div>
                 <div class="rights">
-                    <p>Copyright Party Planner &copy; {{ date('Y') }}</p>
+                    <p>Copyright Party Planner, LLC &copy; {{ date('Y') }}</p>
                 </div>
             </div>
         </footer>

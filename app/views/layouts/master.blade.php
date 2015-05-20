@@ -15,8 +15,8 @@
     <link rel="stylesheet" href="/js/rs-plugin/css/settings.css">
 
     <link rel="stylesheet" href="/css/freeze.css">
-    <link rel="stylesheet" href="/css/style.css"
-
+{{--     <link rel="stylesheet" href="/css/style.css">
+ --}}
     <link rel="stylesheet" href="/css/partyplanner.css">
 
 
@@ -32,8 +32,22 @@
     
 </head>
 @yield('head')
-@include('partials.navbar')
+
 <body>
+   <div class="pre-loader">
+        <div class="load-con">
+            <img src="img/freeze/logo.png" class="animated fadeInDown" alt="">
+            <div class="spinner">
+              <div class="bounce1"></div>
+              <div class="bounce2"></div>
+              <div class="bounce3"></div>
+            </div>
+        </div>
+    </div>
+    <header>
+        @include('partials.navbar')
+
+
     @if (Session::has('successMessage'))
     <div class="alert alert-success">{{{ Session::get('successMessage') }}}</div>
     @endif

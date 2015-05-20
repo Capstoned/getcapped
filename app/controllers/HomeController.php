@@ -50,33 +50,35 @@ class HomeController extends BaseController {
 
 
 
-	// public function doVendorSetup()
-	// {
-	// 	return View::make('vendor-signup');
-	// }
-	// public function doUserSetup()
-	// {
-	// 	return View::make('user-signup');
-	// }
+ 	// Login and logout functions for user Auth
+ 	
+// 	public function tryLogin()
+ 
+// 	{
+// 		$emailOrUsername = Input::get('email_or_username');
+// 		$password = Input::get('password');
+//  		$userOrVendor = Input::get('');
+ 
+// 		if (Auth::attempt(array('email' => $emailOrUsername, 'password' => $password))
+// 			|| (Auth::attempt(array('username' => $emailOrUsername, 'password' => $password))))
+ 
+// 		{
+// 			Session::flash('successMessage', 'Logged in successfully.');
+// 			return View::make('dashboard');
+ 
+// 		}
+ 
+ 
+// 	}
 
-	//** Login functions
- 
-	public function tryLogin()
- 
-	{
-		$emailOrUsername = Input::get('email_or_username');
-		$password = Input::get('password');
- 
- 
-		if (Auth::attempt(array('email' => $emailOrUsername, 'password' => $password))
-			|| (Auth::attempt(array('username' => $emailOrUsername, 'password' => $password))))
- 
-		{
-			Session::flash('successMessage', 'Logged in successfully.');
-			return View::make('dashboard');
- 
-		}
- 
- 
-	}
+
+// 	public function logout()
+// 	{
+
+// 		Auth::logout();
+
+// 		Session::flash('successMessage', 'Logged out successfully.');
+
+// 		return Redirect::action('HomeController@showHome');
+// 	}
 }
