@@ -197,4 +197,24 @@ class UsersController extends BaseController
 
         return Redirect::to('/');
     }
+
+    // public function confirmationEmail()
+    // {
+    //     if(Auth::id){
+    //         Mail::send('emails.confirmation.blade',
+    //             [
+    //             'first_name'    => $user->first_name,
+    //             'last_name'     => $user->last_name,
+    //             'email'         => $user->email,
+    //             ])
+
+    //         function($message)
+    //         {
+    //             $message->from('support@partyplanner.website', 'Support Staff');
+    //             $message->to($user->email, "$user->first_name $user->last_name")
+    //                     ->subject('Welcome to Party Planner!');
+    //         }
+    //     }
+    // }
+
 }
