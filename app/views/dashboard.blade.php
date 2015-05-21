@@ -66,17 +66,17 @@
     
 
     <section id="section-two">
-        <h1 class="weather-title">Weather <i class="fa fa-picture-o"></i></h1>
+        <h1 class="weather-main">Weather <i class="fa fa-picture-o"></i></h1>
     <div class="container">
       <div id="city"></div>
-      <h2>Today's Weather</h2>
+      <h2 class="weather-title">Today's Weather</h2>
 
       <div id="weather"></div>
 
       <div class ="container-fluid">
       
           <div class="row">
-          <h2>3 Day Forecast</h2>
+          <h2 class="weather-title">3 Day Forecast</h2>
 
               <div id="forecast"></div>
 

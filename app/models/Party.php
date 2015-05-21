@@ -24,17 +24,16 @@ class Party extends BaseModel {
 	// Don't forget to fill this array
 	protected $fillable = [];
 
-	
+
 	// Array of codes for various party types
-	public static $partyTypes = ['0' => "Child's Birthday", 
-						'1' => "Anniversary", 
-						'2' => "Adult's Birthday", 
+	public static $partyTypes = ['0' => "Child's Birthday",
+						'1' => "Anniversary",
+						'2' => "Adult's Birthday",
 						'3' => "Other"];
 
 
 
-	
-	// Many to many model relationship				
+	// Many to many model relationship
 	public function vendors()
 	{
 		return $this->belongsToMany('Vendor');

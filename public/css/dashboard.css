@@ -5,6 +5,10 @@
 #section-two{
     background-image: url("/img/freeze/bk-freeze.jpg");
 }
+.weather-main{
+    text-align: center;
+    font-size:  40px;
+}
 .weather-title{
     text-align: center;
 }
