@@ -66,7 +66,8 @@ class UsersController extends BaseController
         if (Confide::user()) {
             return Redirect::to('users-dash');
         } else {
-            return View::make(Config::get('confide::login_form'));
+            // return View::make(Config::get('confide::login_form'));
+            return View::make('users.login');
         }
     }
 
