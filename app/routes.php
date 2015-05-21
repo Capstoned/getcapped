@@ -96,9 +96,13 @@ Route::get('/users/users-dash', function()
 
 
 
+
+
 // KB's Routes to the dashboard view
 
 Route::get('/dashboard', 'HomeController@showDashboard');
+
+Route::get('/about', 'HomeController@showAbout');
 
 
 //

@@ -64,17 +64,17 @@
                     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#about"><i class="fa fa-glass"></i> about</a>
+                            <li><a href="/about"><i class="fa fa-glass"></i> about</a>
                             </li>
                             <li><a href="#reviews"><i class="fa fa-comments"></i> reviews</a>
                             </li>
                             <li><a href="#features"><i class="fa fa-gift"></i> features</a>
                             </li>
                             @if(!Auth::check())
-                                <li><a class="getApp" href="#getApp"><i class="fa fa-sign-in"></i> sign in</a>
+                                <li><a class="getApp" href="/users/login"><i class="fa fa-sign-in"></i> sign in</a>
                                 </li>
                             @else
-                                <li><a href="#"><i class="fa fa-archive"></i> my account</a></li>
+                                <li><a href="/dashboard"><i class="fa fa-archive"></i> my account</a></li>
                             @endif
                             <li><a href="#support"><i class="fa fa-envelope"></i> contact us</a>
                             </li>
@@ -396,7 +396,7 @@
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4" >
-                        <img src="img/freeze/iphone-freeze.png" class="img-responsive scrollpoint sp-effect5" alt="">
+                        <img src="img/freeze/screens/placeholder.png" class="img-responsive scrollpoint sp-effect5" alt="">
                     </div>
                     <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
                         <div class="media feature">
@@ -444,13 +444,13 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="platforms">
-                            <a href="#" class="btn btn-primary inverse scrollpoint sp-effect1">
+                            <a href="/users/create" class="btn btn-primary inverse scrollpoint sp-effect1">
                                 <i class="fa fa-user fa-3x pull-left"></i>
                                 <span>Sign Up As A</span><br>
                                 <b>User</b>
                             </a>
                             
-                                <a href="#" class="btn btn-primary inverse scrollpoint sp-effect2">
+                                <a href="/users/create" class="btn btn-primary inverse scrollpoint sp-effect2">
                                     <i class="fa fa-user fa-3x pull-left"></i>
                                     <span>Sign Up As A</span><br>
                                     <b>Vendor</b>
@@ -523,31 +523,7 @@
             </div>
         </section>
 
-        <section id="screens">
-            <div class="container">
-
-                <div class="section-heading scrollpoint sp-effect3">
-                    <h1>The Dev Team <i class="fa fa-users"></i></h1>
-                    <div class="divider"></div>
-                    <p>Meet the wonderful team behind Party Planner</p>
-                </div>
-
-                <div class="devs slider filtering scrollpoint sp-effect5" >
-                    <div class="one">
-                        <img src="img/freeze/screens/placeholder.png" alt="">
-                        <h4>Max Mayfield</h4>
-                    </div>
-                    <div class="two">
-                        <img src="img/freeze/screens/placeholder.png" alt="">
-                        <h4>Keyasha Brothern</h4>
-                    </div>
-                    <div class="three">
-                        <img src="img/freeze/screens/placeholder.png" alt="">
-                        <h4>Benito Cardenas</h4>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
         <footer>
             <div class="container">

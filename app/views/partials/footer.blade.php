@@ -1,7 +1,7 @@
 <footer>
             <div class="container">
                 <a href="/" class="scrollpoint sp-effect3">
-                    <img src="img/freeze/party-glass.png" alt="" class="logo">
+                    <img src="/img/freeze/party-glass.png" alt="" class="logo">
                 </a>
                 <div class="social">
                     <a href="#" class="scrollpoint sp-effect3"><i class="fa fa-twitter fa-lg"></i></a>
@@ -15,19 +15,18 @@
         </footer>
 
     </div>
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/slick.min.js"></script>
-    <script src="js/placeholdem.min.js"></script>
-    <script src="js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
-    <script src="js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/slick.min.js"></script>
+    <script src="/js/placeholdem.min.js"></script>
+    <script src="/js/rs-plugin/js/jquery.themepunch.plugins.min.js"></script>
+    <script src="/js/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="/js/waypoints.min.js"></script>
+    <script src="/js/scripts.js"></script>
 
     <script>
         $(document).ready(function() {
             appMaster.preLoader();
         });
     </script>
-      <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
+      
