@@ -1,6 +1,4 @@
 @extends('layouts.master')
-<<<<<<< HEAD
-=======
 
 @section('head')
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
@@ -9,17 +7,14 @@
 @stop
 @section('content')
 <div class="container">
->>>>>>> master
+
 
 {{Form::open(array('method' => 'POST', 'action' => 'PartiesController@store', 'class' => 'pure-form spacer form-box-two'))}}
 
-<<<<<<< HEAD
 {{Form::hidden('user_id', Auth::id())}}
 
 
-=======
-{{Form::open(array('method' => 'POST', 'action' => 'PartiesController@store', 'class' => 'pure-form spacer'))}}
->>>>>>> master
+
 
 
 {{-- Removed all labels from forms and made them h2's so they would be larger --}}
@@ -40,13 +35,11 @@
 {{ Form::input('date', 'event_date', null, array())}}
 <br>
 
-<<<<<<< HEAD
 {{-- {{ Form::label ('service_code', 'Select Desired Services')}} --}}
 <h2> Select Desired Services</h2>
-=======
+
 {{ Form::label ('service_id', 'Select Desired Services')}}
 <br>
->>>>>>> master
 
 {{Form::checkbox('service_id[]', '1')}} Balloons
 <br>
@@ -94,19 +87,7 @@
 </div>
 @stop
 
-{{-- 'party_type' => 'required',
-		'address' => 'required',
-		'city' => 'required',
-		'state' => 'required',
-		'zip_code' => 'required',
-		'event_date' => 'required'
 
-public static $partyTypes = ['0' => 'childBday', 
-						'1' => 'anniversary', 
-						'2' => 'adultBday', 
-						'3' => 'other']; --}}
-
-{{-- <div class ="spacer"></div> --}}
 
 
 
