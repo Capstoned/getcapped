@@ -2,16 +2,6 @@ section#getApp {
   background: url("../img/freeze/Slides/party-bg.jpg");
 }
 
-/*.partytype{
-    float:left;
-  }
-.service{
-    float: left;
-    padding-left: 40px;
-  }
-.spacer {
-    padding-top: 200px;
-  }*/
 .signup-form{
     padding-top: 300px;
 }
@@ -31,3 +21,29 @@ section#getApp {
   background: #66cdcc;
   border-color: #66cdcc;
 }
+.form-box{
+    padding-top: 300px;
+    padding-bottom: 300px;
+    background-image: url('/img/freeze/bk-freeze-ga.jpg');
+    color: #fff;
+}
+.form-box-two{
+    padding-top: 300px;
+    padding-left: 150px;
+/*    padding-right: 40px;
+*/    background-image: url('/img/freeze/bk-freeze.jpg');
+    color: #fff;
+}
+.partytype{
+    float:left;
+  }
+  .service{
+    float: left;
+    padding-left: 40px;
+  }
+
+  .spacer {
+    padding-top: 300px;
+  }
+  button, input, optgroup, select, textarea {
+   color: #000;

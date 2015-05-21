@@ -1,4 +1,4 @@
-<!DOCTYPE <html>
+<!DOCTYPE html>
 <head>
     <title>My Dashboard</title>
 
@@ -7,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <link rel="shortcut icon" href="favicon.png">
 
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
     
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="js/rs-plugin/css/settings.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/js/rs-plugin/css/settings.css">
 
     <link rel="stylesheet" href="/css/freeze.css">
 

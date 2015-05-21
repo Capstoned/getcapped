@@ -4,7 +4,7 @@
     var cityName = $('#city');
     var forecastHtml = '';
 
-    var currentWeather = $.ajax('http://api.openweathermap.org/data/2.5/weather?q=San+Antonio,TX');
+    var currentWeather = $.ajax('http://api.openweathermap.org/data/2.5/weather?q=San+Antonio,TX&APPID=7511d6aa040231db8c1b8f06b764d188');
 
     currentWeather.done(function(data) {
         console.log(data);
@@ -21,7 +21,7 @@
         $('#weather').html(weatherToDisplay);
     });
 
-        var forecastWeather = $.ajax('http://api.openweathermap.org/data/2.5/forecast/daily?lat=29.423017&lon=-98.48527&cnt=3&mode=json');
+        var forecastWeather = $.ajax('http://api.openweathermap.org/data/2.5/forecast/daily?lat=29.423017&lon=-98.48527&cnt=3&mode=json&APPID=7511d6aa040231db8c1b8f06b764d188');
         
         forecastWeather.done(function(data) {
         	// console.log(data);

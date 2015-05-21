@@ -7,6 +7,7 @@
 
 <h1>Here's the map page</h1>
 
+
 <div id="map" ></div>
 
 <!-- Load the Google Maps API [DON'T FORGET TO USE A KEY] -->
@@ -49,6 +50,7 @@
 
       };
 
+
       map = new google.maps.Map(document.getElementById("map"), mapOptions);
       map.setTilt(45);
       map.setHeading(90);
@@ -74,7 +76,7 @@
     // WINDOW
     // Create a new infoWindow object with content
     var infowindow = new google.maps.InfoWindow({
-      content: 'Party Location'
+      content: 'Party Location: ' + address
     });
 
 // Open the window using our map and marker
@@ -90,6 +92,7 @@ infowindow.open(map,marker);
 
     // // Open the window using our map and marker
     // infowindow.open(map,marker);
+
 
   </script>
 

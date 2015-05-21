@@ -52,7 +52,10 @@ class HomeController extends BaseController {
 		return View::make('dashboard')->with('party', $party);
 	}
 
-
-
-
+	public function showAbout()
+	{
+		return View::make('about');
+	}
 }
+
+
