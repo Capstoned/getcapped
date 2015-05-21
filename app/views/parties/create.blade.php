@@ -1,4 +1,4 @@
-@section('content')
+@extends('layouts.master')
 
 <style type="text/css">
   .partytype{

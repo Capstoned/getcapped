@@ -1,6 +1,6 @@
 <?php
 
-class Service extends \Eloquent {
+class Service extends BaseModel {
 	protected $fillable = ['description'];
 
 
