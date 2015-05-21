@@ -1,6 +1,8 @@
 <?php
 
-class Party extends \Eloquent {
+use Carbon\Carbon;
+
+class Party extends BaseModel {
 
 
 	protected $table = 'parties';
@@ -24,10 +26,10 @@ class Party extends \Eloquent {
 
 	
 	// Array of codes for various party types
-	public static $partyTypes = ['0' => 'childBday', 
-						'1' => 'anniversary', 
-						'2' => 'adultBday', 
-						'3' => 'other'];
+	public static $partyTypes = ['0' => "Child's Birthday", 
+						'1' => "Anniversary", 
+						'2' => "Adult's Birthday", 
+						'3' => "Other"];
 
 
 
@@ -46,5 +48,11 @@ class Party extends \Eloquent {
 	public function getDates()
 	{
 	    return array('created_at', 'updated_at', 'event_date');
+	}
+
+	public function getEventDate($value)
+	{
+    	$utc = Carbon::createFromFormat($this->getDateFormat(), $value);
+    	return $utc->setTimezone('America/Chicago');
 	}
 }

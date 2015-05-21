@@ -1,6 +1,6 @@
 <?php
 
-class Vendor extends \Eloquent {
+class Vendor extends BaseModel {
 
 		protected $table = 'vendors';
 

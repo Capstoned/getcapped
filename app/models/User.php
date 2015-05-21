@@ -40,7 +40,7 @@ class User extends Eloquent implements ConfideUserInterface
     // Establishing one-to-many model relationship
     public function parties()
 	{
-		return $this->belongsToMany('Party');
+		return $this->hasMany('Party');
 	}
 
 	// Validation rules for storing new users

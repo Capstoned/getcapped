@@ -1,4 +1,6 @@
 @extends('layouts.master')
+<<<<<<< HEAD
+=======
 
 @section('head')
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
@@ -7,6 +9,7 @@
 @stop
 @section('content')
 <div class="container">
+>>>>>>> master
 
 {{Form::open(array('method' => 'POST', 'action' => 'PartiesController@store', 'class' => 'pure-form spacer form-box-two'))}}
 
