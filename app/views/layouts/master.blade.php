@@ -8,12 +8,12 @@
     <link rel="shortcut icon" href="favicon.png">
 
     <link rel="stylesheet" href="/css/bootstrap.css">
-    
+
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/slick.css">
     <link rel="stylesheet" href="/js/rs-plugin/css/settings.css">
-    
+
     <link rel="stylesheet" href="/css/freeze.css">
 {{--     <link rel="stylesheet" href="/css/style.css">
  --}}
@@ -36,7 +36,7 @@
 <body>
    <div class="pre-loader">
         <div class="load-con">
-            <img src="img/freeze/logo.png" class="animated fadeInDown" alt="">
+            <img src="/img/freeze/party-glass.png" class="animated fadeInDown" alt="">
             <div class="spinner">
               <div class="bounce1"></div>
               <div class="bounce2"></div>
