@@ -7,6 +7,7 @@ class Vendor extends BaseModel {
 
 	// Add your validation rules here
 	public static $rules = array(
+		'user_id' => 'required',
 		'vendor_name'	=> 'required',
         'address' => 'required',
 		'city' => 'required',
