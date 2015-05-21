@@ -2,16 +2,6 @@ section#getApp {
   background: url("../img/freeze/Slides/party-bg.jpg");
 }
 
-/*.partytype{
-    float:left;
-  }
-.service{
-    float: left;
-    padding-left: 40px;
-  }
-.spacer {
-    padding-top: 200px;
-  }*/
 .signup-form{
     padding-top: 300px;
 }
@@ -55,3 +45,5 @@ section#getApp {
   .spacer {
     padding-top: 300px;
   }
+  button, input, optgroup, select, textarea {
+   color: #000;

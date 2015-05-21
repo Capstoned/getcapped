@@ -1,0 +1,16 @@
+#screens{
+    padding-top: 200px;
+}
+.devs{
+        background-image: url('/img/freeze/Slides/party-bg.jpg');
+}
+.slider{
+    padding-top: 55px;
+}
+section#screens .slider div h4 {
+   color: #fff;
+   background: #66cdcc;
+   font-size: 24px;
+   font-weight: bold;
+   border-radius: 5px;
+}
