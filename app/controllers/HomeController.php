@@ -48,7 +48,12 @@ class HomeController extends BaseController {
 
 	public function showDashboard()
 	{
-	    $party = Party::all()->random();
+	    // $party = Party::all()->random();
+	   	$user_id = Auth::id();
+	   	$party = Party::where('user_id', '=', $user_id)->first();
+
+	   	// dd($party);
+
 		return View::make('dashboard')->with('party', $party);
 	}
 

@@ -1,25 +1,26 @@
 
-
 @foreach(Auth::user()->parties as $userParty)
 	
 
 	<div>
 	
-	<h2>Party Type</h2>
+	<h4>Party Type</h4>
 	
 	{{Party::$partyTypes[$userParty->party_type] }}
 	<br>
 
-	<h2>Event Date</h2>
-	{{ $userParty->getEventDate('event_date')->first() }}
+	<h4>Event Date</h4>
+	{{ $userParty->getEventDate($userParty->event_date) }}
 	<br>
 	
-	<h2>Services Requested</h2>
+	<h4>Services Requested</h4>
+		<?php $services = $userParty->services; ?>
+	@foreach($services as $service)
+		{{ $service->description }} <br>
+	@endforeach
 
 
-	{{ $userParty->service_id }}
-
-	<h2>Address</h2>
+	<h4>Address</h4>
 	{{ $userParty->address }}
 	<br>
 	{{ $userParty->city }}
@@ -28,9 +29,10 @@
 	<br>
 	{{ $userParty->zip_code }}
 	
-	<h2>Comments</h2>
+	<h4>Comments</h4>
 	{{ $userParty->comments }}
 
 	</div>
+	<br>
 
 @endforeach

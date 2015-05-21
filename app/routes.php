@@ -44,7 +44,7 @@ Route::get('/', 'HomeController@showHome');
 
 // Route::resource('users', 'UsersController');
 
-Route::resource('vendors', 'VendorsController');
+// Route::resource('vendors', 'VendorsController');
 
 Route::resource('parties', 'PartiesController');
 

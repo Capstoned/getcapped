@@ -7,6 +7,7 @@ class Vendor extends BaseModel {
 
 	// Add your validation rules here
 	public static $rules = array(
+		'user_id' => 'required',
 		'vendor_name'	=> 'required',
         'address' => 'required',
 		'city' => 'required',
@@ -24,8 +25,8 @@ class Vendor extends BaseModel {
 
 
  	// Array of codes for types of vendor services
-	public static $serviceCodes = ['0' => 'balloons', 
-						'1' => 'catering', 
+	public static $serviceCodes = ['0' => 'Balloons', 
+						'1' => 'Catering', 
 						'2' => 'DJ', ];
 
 	// Many-to-many model relationship

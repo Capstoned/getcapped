@@ -35,7 +35,7 @@ class VendorsController extends BaseController {
 
 		if ($validator->fails())
 		{
-			$dd($errors);
+			dd($_POST);
 			Session::flash('errorMessage', 'Vendor Create Error');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
@@ -43,7 +43,7 @@ class VendorsController extends BaseController {
 			Vendor::create(Input::except('_token'));
 			// Vendor::create($data);
 
-		return Redirect::to('/vendor-dash');
+		return Redirect::to('/');
 	}
 
 
