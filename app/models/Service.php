@@ -7,7 +7,7 @@ class Service extends \Eloquent {
 	// Many-to-many model relationship
 	public function parties()
 	{
-		return $this->belongsToMany('Party')
+		return $this->belongsToMany('Party');
 	}
 
 

@@ -10,9 +10,13 @@
 
 {{Form::open(array('method' => 'POST', 'action' => 'PartiesController@store', 'class' => 'pure-form spacer form-box-two'))}}
 
+<<<<<<< HEAD
 {{Form::hidden('user_id', Auth::id())}}
 
 
+=======
+{{Form::open(array('method' => 'POST', 'action' => 'PartiesController@store', 'class' => 'pure-form spacer'))}}
+>>>>>>> master
 
 
 {{-- Removed all labels from forms and made them h2's so they would be larger --}}
@@ -29,15 +33,23 @@
 {{Form::radio('party_type', '3')}} Other
 <br>
 
+{{ Form::label ('event_date', 'Select Your Party Date')}}
+{{ Form::input('date', 'event_date', null, array())}}
+<br>
 
+<<<<<<< HEAD
 {{-- {{ Form::label ('service_code', 'Select Desired Services')}} --}}
 <h2> Select Desired Services</h2>
+=======
+{{ Form::label ('service_id', 'Select Desired Services')}}
+<br>
+>>>>>>> master
 
-{{Form::checkbox('service_code', '0')}} Balloons
+{{Form::checkbox('service_id[]', '1')}} Balloons
 <br>
-{{Form::checkbox('service_code', '1')}} DJ
+{{Form::checkbox('service_id[]', '2')}} DJ
 <br>
-{{Form::checkbox('service_code', '2')}} Catering
+{{Form::checkbox('service_id[]', '3')}} Catering
 <br>
 
 
@@ -47,22 +59,22 @@
 
 {{ Form::label ('address', null, array('placeholder' => 'Address')) }}
 <br>
-{{Form::text('address', 'Address')}}
+{{Form::text('address', null, array('placeholder' =>'Address'))}}
 <br>
 
 {{ Form::label ('city', 'City')}}
 <br>
-{{Form::text('city', 'City')}}
+{{Form::text('city', null, array('placeholder' =>'City'))}}
 <br>
 
 {{ Form::label ('state', 'State')}}
 <br>
-{{Form::text('state', 'State')}}
+{{Form::text('state', null, array('placeholder' =>'State'))}}
 <br>
 
 {{ Form::label ('zip_code', 'Zip Code')}}
 <br>
-{{Form::text('zip_code', 'Zip')}}
+{{Form::text('zip_code', null, array('placeholder' =>'ZIP Code'))}}
 <br>
 
 {{ Form::label ('comments', 'Comments')}}

@@ -45,6 +45,7 @@ class HomeController extends BaseController {
 		return View::make('user-dash');
 	}
 
+
 	public function showDashboard()
 	{
 	    $party = Party::all()->random();
@@ -58,36 +59,3 @@ class HomeController extends BaseController {
 	}
 
 
-
- 	// Login and logout functions for user Auth
- 	
-// 	public function tryLogin()
- 
-// 	{
-// 		$emailOrUsername = Input::get('email_or_username');
-// 		$password = Input::get('password');
-//  		$userOrVendor = Input::get('');
- 
-// 		if (Auth::attempt(array('email' => $emailOrUsername, 'password' => $password))
-// 			|| (Auth::attempt(array('username' => $emailOrUsername, 'password' => $password))))
- 
-// 		{
-// 			Session::flash('successMessage', 'Logged in successfully.');
-// 			return View::make('dashboard');
- 
-// 		}
- 
- 
-// 	}
-
-
-// 	public function logout()
-// 	{
-
-// 		Auth::logout();
-
-// 		Session::flash('successMessage', 'Logged out successfully.');
-
-// 		return Redirect::action('HomeController@showHome');
-// 	}
-}
