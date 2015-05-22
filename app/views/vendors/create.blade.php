@@ -1,6 +1,7 @@
-@if (Auth::check())
-    {{Auth::id()}}
-@endif
+@extends('layouts.master')
+
+@section('content')
+
 
 <div id= "vendor_edit">
 
@@ -66,3 +67,5 @@
 
 
 </div>
+
+@stop
