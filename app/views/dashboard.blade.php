@@ -46,10 +46,10 @@
     <div class ="mainbox">
 
 
+  <?php $parties = [] ?>
 
   @foreach(Auth::user()->parties as $userParty)
     
-
     <div class="parties">
     
       <h4>Party Type</h4>
@@ -58,7 +58,7 @@
       <br>
 
       <h4>Event Date</h4>
-      {{ $userParty->getEventDate($userParty->event_date) }}
+      <p class = "party_date" data = "{{{$userParty->event_date}}}">{{ $userParty->getEventDate($userParty->event_date) }} </p>
       <br>
       
       <h4>Services Requested</h4>
@@ -85,10 +85,11 @@
       <br>
     </div>
    
+   <?php $parties[] = $userParty ?>
 
   @endforeach
 
-{{ $userParty->event_date }}
+
   </div>
 </div>
 
@@ -157,19 +158,15 @@
 <script src="/js/js_ajax_weather.js"></script>
 
 <script>
+  
   var currentMonth = moment().format('YYYY-MM');
-  var nextMonth    = moment().add('month', 1).format('YYYY-MM');
   var currentDay = moment().format('DD');
   var eventMonth = '{{substr($userParty->event_date, 0, -12)}}';
-  var eventDay = '{{substr($userParty->event_date, 8, -9)}}'
-  console.log(eventDay);
+  var eventDay = '{{substr($userParty->event_date, 8, -9)}}';
 
-  // var partyDate = '{{ $party->event_date }}';
   var events = [
     { date: currentMonth + '-' + currentDay, title: 'Today', location: '' },
-    { date: eventMonth + '-' + eventDay, title: 'Cat Frisbee', location: 'Jefferson Park' },
-    { date: currentMonth + '-' + '11', title: 'Kitten Demonstration', location: 'Center for Beautiful Cats' },
-    { date: nextMonth + '-' + '07',    title: 'Small Cat Photo Session', location: 'Center for Cat Photography' }
+    { date: eventMonth + '-' + eventDay, title: 'Party', location: '' },
   ];
 
 $('#mini-clndr').clndr({
