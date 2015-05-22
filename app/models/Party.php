@@ -22,7 +22,8 @@ class Party extends BaseModel {
 	];
 
 	// Don't forget to fill this array
-	protected $fillable = [];
+	protected $fillable = ['party_type', 'user_id', 'address', 'city', 
+							'state', 'zip_code', 'event_date', 'service_id', 'comments', 'confirm_date'];
 
 
 	// Array of codes for various party types

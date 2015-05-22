@@ -1,6 +1,8 @@
 @extends('layouts.master')
 
-{{-- @include('partials.vendor-edit') --}}
+@section('vendors-edit')
+	@include('partials.vendor-edit')
+@stop
 
-@include('vendors.create')
+{{-- @include('vendors.create') --}}
 
