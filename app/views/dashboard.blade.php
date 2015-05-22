@@ -79,12 +79,16 @@
       
       <h4>Comments</h4>
       {{ $userParty->comments }}
-
+      <br>
+      <br>
+      <a class="btn btn-default" href="{{{ action ('PartiesController@edit', $userParty->id) }}}" role="button">Edit Party</a>
+      <br>
     </div>
    
 
   @endforeach
 
+{{ $userParty->event_date }}
   </div>
 </div>
 
@@ -137,6 +141,7 @@
         </div>
     </section>
 
+
         @include('partials.footer')
 
 <script src="/js/jquery-1.11.1.min.js"></script>
@@ -154,10 +159,16 @@
 <script>
   var currentMonth = moment().format('YYYY-MM');
   var nextMonth    = moment().add('month', 1).format('YYYY-MM');
+  var currentDay = moment().format('DD');
+  var eventMonth = '{{substr($userParty->event_date, 0, -12)}}';
+  var eventDay = '{{substr($userParty->event_date, 8, -9)}}'
+  console.log(eventDay);
+
+  // var partyDate = '{{ $party->event_date }}';
   var events = [
-    { date: currentMonth + '-' + '10', title: 'Persian Kitten Auction', location: 'Center for Beautiful Cats' },
-    { date: currentMonth + '-' + '19', title: 'Cat Frisbee', location: 'Jefferson Park' },
-    { date: currentMonth + '-' + '23', title: 'Kitten Demonstration', location: 'Center for Beautiful Cats' },
+    { date: currentMonth + '-' + currentDay, title: 'Today', location: '' },
+    { date: eventMonth + '-' + eventDay, title: 'Cat Frisbee', location: 'Jefferson Park' },
+    { date: currentMonth + '-' + '11', title: 'Kitten Demonstration', location: 'Center for Beautiful Cats' },
     { date: nextMonth + '-' + '07',    title: 'Small Cat Photo Session', location: 'Center for Cat Photography' }
   ];
 
