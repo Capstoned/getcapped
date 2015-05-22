@@ -1,10 +1,18 @@
 
-(function() {
+// (function() {
     // var weatherDisplay = $('#weather');
     var cityName = $('#city');
     var forecastHtml = '';
 
-    var currentWeather = $.ajax('http://api.openweathermap.org/data/2.5/weather?q=95350&APPID=7511d6aa040231db8c1b8f06b764d188');
+    // var currentWeather = $.ajax('http://api.openweathermap.org/data/2.5/weather?q=' + '95350&APPID=7511d6aa040231db8c1b8f06b764d188');
+    var currentWeather;
+
+    function pass_the_zip(zip_code) {
+      console.log(zip_code);
+      currentWeather = $.ajax('http://api.openweathermap.org/data/2.5/weather?q=' + zip_code + '&APPID=7511d6aa040231db8c1b8f06b764d188');
+    
+
+    console.log(currentWeather);
 
     currentWeather.done(function(data) {
         console.log(data);
@@ -100,4 +108,4 @@ var googleWeather;
     // });
 
 
-})();
+// })();
