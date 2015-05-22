@@ -9,10 +9,10 @@
 <div class="container">
 
 
-{{Form::open(array('method' => 'POST', 'action' => 'PartiesController@store', 'class' => 'pure-form spacer form-box-two'))}}
 
 
-{{ Form::model($party, array('route' => ['parties.update', $party->Auth::id()], 'id' => 'p-edit', 'method' => 'PUT', 'class' => 'spacer pure-form pure-form-stacked')) }}
+
+{{ Form::model($party, array('route' => ['parties.update', $party->id], 'id' => 'p-edit', 'method' => 'PUT', 'class' => 'spacer pure-form pure-form-stacked')) }}
 
 {{Form::hidden('user_id', Auth::id())}}
 
