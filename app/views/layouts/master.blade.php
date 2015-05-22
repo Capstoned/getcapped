@@ -55,7 +55,6 @@
     <div class="alert alert-danger">{{{ Session::get('errorMessage') }}}</div>
     @endif
 
-@yield('vendors-edit')
 @yield('content')
 </body>
 @include('partials.footer')

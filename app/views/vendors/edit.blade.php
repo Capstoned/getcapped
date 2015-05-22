@@ -1,3 +1,7 @@
+@extends('layouts.master')
+
+@section('content')
+
 <div id= "vendor_edit">
 
 
@@ -50,7 +54,6 @@
        
     </fieldset>
     	<H3>In a sentence, describe your service to potential customers</h3>
-         	<textarea name="description" form="v-form"></textarea>
           	{{Form::textarea('description')}}
 
            <button type="submit" class="pure-button pure-button-primary">Create Account</button>
@@ -61,3 +64,5 @@
 
 
 </div>
+
+@stop
