@@ -12,10 +12,7 @@
 {{Form::open(array('method' => 'POST', 'action' => 'PartiesController@store', 'class' => 'pure-form spacer form-box-two'))}}
 
 
-
 {{Form::hidden('user_id', Auth::id())}}
-
-
 
 
 
