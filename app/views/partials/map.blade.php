@@ -1,9 +1,3 @@
-<p>
-    {{$party->address}}
-    {{$party->city}}
-    {{$party->state}}
-    {{$party->zip_code}}
-</p>
 
 <h1>Here's the map page</h1>
 

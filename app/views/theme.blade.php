@@ -486,12 +486,12 @@
                                     <div class="form-group">
                                         <textarea cols="30" rows="10" class="form-control" placeholder="Your message"></textarea>
                                     </div>
-                                    <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                                    <button type="submit" class="btn btn-primary btn-lg disabled">Submit</button>
                                 </form>
                             </div>
                             <div class="col-md-4 col-sm-4 contact-details scrollpoint sp-effect2">
                                 <div class="media">
-                                    <a class="pull-left" href="#" >
+                                    <a class="pull-left">
                                         <i class="fa fa-map-marker fa-2x"></i>
                                     </a>
                                     <div class="media-body">
@@ -499,7 +499,7 @@
                                     </div>
                                 </div>
                                 <div class="media">
-                                    <a class="pull-left" href="#" >
+                                    <a class="pull-left">
                                         <i class="fa fa-envelope fa-2x"></i>
                                     </a>
                                     <div class="media-body">
@@ -509,7 +509,7 @@
                                     </div>
                                 </div>
                                 <div class="media">
-                                    <a class="pull-left" href="#" >
+                                    <a class="pull-left">
                                         <i class="fa fa-phone fa-2x"></i>
                                     </a>
                                     <div class="media-body">
