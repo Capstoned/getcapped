@@ -29,7 +29,7 @@ class User extends BaseModel implements ConfideUserInterface
 	*@return hashed string
 	*/
 
-	public function userTypes = ['0' => 'User', '1' => 'Vendor']
+	public function userTypes = ['0' => 'User', '1' => 'Vendor'];
 
 	// // Lowercasing usernames for convention
 	// public function setUsernameAttribute($value)
