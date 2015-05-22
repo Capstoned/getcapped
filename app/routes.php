@@ -16,85 +16,11 @@
 Route::get('/', 'HomeController@showHome');
 
 
-
-
-
-// Max's Routes
-
-// Vendor pages
-// Route::get('/vendor-signup', 'HomeController@showVendorSignup');
-
-// Route::get('/vendor-dash', 'HomeController@showVendorDash');
-
-// User pages
-// Route::get('/user-signup', 'HomeController@showUserSignup');
-
-// Route::get('/user-dash', 'HomeController@showUserDash');
-
-
-
-
-
-
-
-
-
-
-
-
 // Route::resource('users', 'UsersController');
 
 Route::resource('vendors', 'VendorsController');
 
 Route::resource('parties', 'PartiesController');
-
-
-
-
-
-
-
-
-
-
-
-
-// TEST ROUTES FOR MAX / KB / BENNY
-
-Route::get('/users/users-dash', function()
-{
-
-	return View::make('users/users-dash');
-	
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -105,7 +31,7 @@ Route::get('/dashboard', 'HomeController@showDashboard');
 Route::get('/about', 'HomeController@showAbout');
 
 
-//
+
 
 // Confide routes
 Route::get('users/create', 'UsersController@create');

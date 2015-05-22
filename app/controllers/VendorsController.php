@@ -35,15 +35,13 @@ class VendorsController extends BaseController {
 
 		if ($validator->fails())
 		{
-			$dd($errors);
 			Session::flash('errorMessage', 'Vendor Create Error');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
 			Session::flash('successMessage', 'Saved successfully');
 			Vendor::create(Input::except('_token'));
-			// Vendor::create($data);
 
-		return Redirect::to('/vendor-dash');
+		return Redirect::to('/');
 	}
 
 
@@ -122,7 +120,7 @@ class VendorsController extends BaseController {
 	public function showDash()
 	{
 		$id = Auth::id();
-		dd($id);
+		// dd($id);
 		$vendor = Vendor::where('user_id', $id)->first();
 	
 		return View::make('vendors.vendors-dash')->with(['vendor'=> $vendor]);
