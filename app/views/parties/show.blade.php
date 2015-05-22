@@ -1,4 +1,4 @@
-
+Blah blah
 
 @foreach(Auth::user()->parties as $userParty)
 	
