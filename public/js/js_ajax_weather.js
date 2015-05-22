@@ -3,7 +3,6 @@
     // var weatherDisplay = $('#weather');
     var cityName = $('#city');
     var forecastHtml = '';
-    var address = '{{$parties->zip_code}}';
 
     var currentWeather = $.ajax('http://api.openweathermap.org/data/2.5/weather?q=95350&APPID=7511d6aa040231db8c1b8f06b764d188');
 
