@@ -50,15 +50,14 @@ class PartiesController extends BaseController {
 			$party->state = Input::get('state');
 			$party->zip_code = Input::get('zip_code');
 			$party->save();
-	
 			$serviceTypes = Input::get('service_id');
-			
+
 			foreach ($serviceTypes as $serviceType)
 			{
 				$party->services()->attach($serviceType);
-	
+
 			};
-	
+
 			Session::flash('successMessage', 'Saved successfully');
 			return Redirect::back()->withInput();
 	}
@@ -116,9 +115,7 @@ class PartiesController extends BaseController {
 			$party->state = Input::get('state');
 			$party->zip_code = Input::get('zip_code');
 			$party->save();
-	
 			$serviceTypes = Input::get('service_id');
-			
 			foreach ($serviceTypes as $serviceType)
 			{
 				$party->services()->attach($serviceType);

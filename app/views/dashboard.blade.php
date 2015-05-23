@@ -22,6 +22,8 @@
 
 
 
+
+
     <script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
 </head>
 <body>
@@ -40,12 +42,14 @@
     <header>
 @include('partials.navbar')
 
+  
+  </section>
 <!-- change from img to background image for this div -->
     <section id="section-one">
 <div class="container">
     <div class ="mainbox">
 
-
+<h1 class="weather-main">Your Events <i class="fa fa-gift"></i></h1>
 
   @foreach(Auth::user()->parties as $userParty)
     
@@ -88,7 +92,6 @@
 
   @endforeach
 
-{{ $userParty->event_date }}
   </div>
 </div>
 
@@ -156,6 +159,8 @@
 
 <script src="/js/js_ajax_weather.js"></script>
 
+
+
 <script>
   var currentMonth = moment().format('YYYY-MM');
   var nextMonth    = moment().add('month', 1).format('YYYY-MM');
@@ -169,7 +174,7 @@
     { date: currentMonth + '-' + currentDay, title: 'Today', location: '' },
     { date: eventMonth + '-' + eventDay, title: 'Cat Frisbee', location: 'Jefferson Park' },
     { date: currentMonth + '-' + '11', title: 'Kitten Demonstration', location: 'Center for Beautiful Cats' },
-    { date: nextMonth + '-' + '07',    title: 'Small Cat Photo Session', location: 'Center for Cat Photography' }
+    { date: nextMonth + '-' + eventDay,    title: 'Small Cat Photo Session', location: 'Center for Cat Photography' }
   ];
 
 $('#mini-clndr').clndr({
@@ -189,6 +194,7 @@ $('#mini-clndr').clndr({
     adjacentDaysChangeMonth: true
   });
   </script>
+
 </body>
 </html>
 
