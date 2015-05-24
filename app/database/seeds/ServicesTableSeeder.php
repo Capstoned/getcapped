@@ -8,7 +8,7 @@ class ServicesTableSeeder extends Seeder {
 	public function run()
 	{
 		$service1 = new Service();
-		$service1->description = "ballons";
+		$service1->description = "Ballons";
 		$service1->save();
 
 		$service2 = new Service();
@@ -16,7 +16,7 @@ class ServicesTableSeeder extends Seeder {
 		$service2->save();
 
 		$service3 = new Service();
-		$service3->description = "catering";
+		$service3->description = "atering";
 		$service3->save();
 
 	}

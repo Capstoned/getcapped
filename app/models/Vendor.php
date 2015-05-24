@@ -1,6 +1,6 @@
 <?php
 
-class Vendor extends BaseModel {
+class Vendor extends User {
 
 		protected $table = 'vendors';
 
@@ -13,14 +13,14 @@ class Vendor extends BaseModel {
 		'city' => 'required',
 		'state' => 'required',
 		'zip_code' => 'required',
-		'service_code' => 'required',
+		'service_id' => 'required',
     );
 
 
 	// Don't forget to fill this array
 
 	protected $fillable = ['user_id','vendor_name', 'address','city', 
-						'state', 'zip_code', 'service_code', 'description'];
+						'state', 'zip_code', 'service_id', 'description'];
 
 
 

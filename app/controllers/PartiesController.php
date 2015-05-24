@@ -51,12 +51,13 @@ class PartiesController extends BaseController {
 			$party->zip_code = Input::get('zip_code');
 			$party->save();
 	
+			// Attach service types for pivot table
 			$serviceTypes = Input::get('service_id');
 			
 			foreach ($serviceTypes as $serviceType)
 			{
 				$party->services()->attach($serviceType);
-	
+				// $party->	
 			};
 	
 			Session::flash('successMessage', 'Saved successfully');
