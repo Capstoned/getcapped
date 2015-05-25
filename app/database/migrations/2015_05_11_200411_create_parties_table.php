@@ -25,7 +25,6 @@ class CreatePartiesTable extends Migration {
 			$table->string('zip_code');
 			$table->dateTime('event_date');
 			$table->dateTime('confirm_date')->nullable();
-			$table->enum('event_status', array('0','3'));
 			$table->timestamps();
 		});
 	}

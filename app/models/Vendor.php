@@ -1,6 +1,6 @@
 <?php
 
-class Vendor extends User {
+class Vendor extends BaseModel {
 
 		protected $table = 'vendors';
 
@@ -25,14 +25,8 @@ class Vendor extends User {
 
 
  	// Array of codes for types of vendor services
-	public static $serviceCodes = ['0' => 'Balloons', 
-						'1' => 'Catering', 
-						'2' => 'DJ', ];
-
-	// Many-to-many model relationship
-	public function parties()
-	{
-		return $this->belongsToMany('Party');
-	}
+	public static $serviceCodes = ['1' => 'Balloons', 
+						'2' => 'Catering', 
+						'3' => 'DJ', ];
 
 }

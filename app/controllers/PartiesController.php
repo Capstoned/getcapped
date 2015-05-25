@@ -38,7 +38,7 @@ class PartiesController extends BaseController {
 			Session::flash('errorMessage', 'Post not saved');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
-		
+			
 			$party = new Party();
 			$party->user_id = Input::get('user_id');
 			$party->party_type = Input::get('party_type');

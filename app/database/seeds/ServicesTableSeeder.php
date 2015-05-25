@@ -16,7 +16,7 @@ class ServicesTableSeeder extends Seeder {
 		$service2->save();
 
 		$service3 = new Service();
-		$service3->description = "atering";
+		$service3->description = "Catering";
 		$service3->save();
 
 	}
