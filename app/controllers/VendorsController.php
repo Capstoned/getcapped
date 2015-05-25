@@ -59,7 +59,7 @@ class VendorsController extends BaseController {
 		// return View::make('vendors.show', compact('vendor'));
 
 		$id = Auth::id();
-		// dd($id);
+
 		$vendor = Vendor::where('user_id', $id)->first();
 	
 		return View::make('vendors.vendors-dash')->with(['vendor'=> $vendor]);
@@ -120,9 +120,12 @@ class VendorsController extends BaseController {
 	public function showDash()
 	{
 		$id = Auth::id();
-		// dd($id);
 		$vendor = Vendor::where('user_id', $id)->first();
-	
-		return View::make('vendors.vendors-dash')->with(['vendor'=> $vendor]);
+		
+		if (!$vendor) {
+			return View::make('vendors.create');
+		} else {
+			return View::make('vendors.edit')->with(['vendor'=> $vendor]);
+		}
 	}
 }

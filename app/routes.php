@@ -45,6 +45,6 @@ Route::get('users/reset_password/{token}', 'UsersController@resetPassword');
 Route::post('users/reset_password', 'UsersController@doResetPassword');
 Route::get('users/logout', 'UsersController@logout');
 // Vendor dashboard and edit routes
-Route::get('/vendors/vendor-dash', 'VendorsController@showDash');
-Route::put('/vendors/vendor-dash/{id}', 'VendorsController@update');
+Route::get('/vendor-dash', 'VendorsController@showDash');
+Route::put('/vendor-dash/{id}', 'VendorsController@update');
 // User dashboard and edit routes
