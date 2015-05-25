@@ -128,4 +128,21 @@ class VendorsController extends BaseController {
 			return View::make('vendors.edit')->with(['vendor'=> $vendor]);
 		}
 	}
+
+	// Search for the emails of Vendors of a given Service
+	public function getServiceVendorEmails($service)
+	{
+		$vendors = Vendor::where('service_id', $service);
+
+		dd($vendors);
+		// foreach ($vendors as $vendor)
+		// {
+		// 	$vendorUserIds = $vendor->user_id;
+		// }
+
+		// foreach ($vendorUserIds as $id)
+		// 	$userEmail = User->getUserEmailById();
+	}
+
+
 }

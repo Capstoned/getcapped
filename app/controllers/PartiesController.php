@@ -38,7 +38,7 @@ class PartiesController extends BaseController {
 			Session::flash('errorMessage', 'Post not saved');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
-		
+			
 			$party = new Party();
 			$party->user_id = Input::get('user_id');
 			$party->party_type = Input::get('party_type');
@@ -51,12 +51,13 @@ class PartiesController extends BaseController {
 			$party->zip_code = Input::get('zip_code');
 			$party->save();
 	
+			// Attach service types for pivot table
 			$serviceTypes = Input::get('service_id');
 			
 			foreach ($serviceTypes as $serviceType)
 			{
 				$party->services()->attach($serviceType);
-	
+				// $party->	
 			};
 	
 			Session::flash('successMessage', 'Saved successfully');
