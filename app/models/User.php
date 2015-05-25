@@ -28,7 +28,7 @@ class User extends BaseModel implements ConfideUserInterface
 	*
 	*@return hashed string
 	*/
-
+	// Array of codes for different user types
 	public $userTypes = ['0' => 'User', '1' => 'Vendor'];
 
 	// // Lowercasing usernames for convention

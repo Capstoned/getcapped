@@ -34,12 +34,12 @@ class Party extends BaseModel {
 
 
 
-	// Many to many model relationship
+	// Many to many model relationships
 	public function vendors()
 	{
 		return $this->belongsToMany('Vendor');
 	}
-
+	
 	public function services()
 	{
 		return $this->belongsToMany('Service');
@@ -52,7 +52,7 @@ class Party extends BaseModel {
 
 	public function getEventDate($value)
 	{
-		// dd($value);
+
     	$utc = Carbon::createFromFormat($this->getDateFormat(), $value);
     	return $utc->setTimezone('America/Chicago')->toFormattedDateString();
 	}
