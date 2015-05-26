@@ -34,7 +34,7 @@ class VendorsController extends BaseController {
 		$validator = Validator::make($data = Input::all(), Vendor::$rules);
 
 		if ($validator->fails())
-		{
+		{ dd($_POST);
 			Session::flash('errorMessage', 'Vendor Create Error');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
@@ -129,20 +129,7 @@ class VendorsController extends BaseController {
 		}
 	}
 
-	// Search for the emails of Vendors of a given Service
-	public function getServiceVendorEmails($service)
-	{
-		$vendors = Vendor::where('service_id', $service);
 
-		dd($vendors);
-		// foreach ($vendors as $vendor)
-		// {
-		// 	$vendorUserIds = $vendor->user_id;
-		// }
-
-		// foreach ($vendorUserIds as $id)
-		// 	$userEmail = User->getUserEmailById();
-	}
 
 
 }

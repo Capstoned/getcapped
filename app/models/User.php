@@ -49,7 +49,10 @@ class User extends BaseModel implements ConfideUserInterface
         'password' => 'required|min:6'
     );
 
-
+	public function vendor()
+	{
+		return $this->hasOne('Vendor');
+	}
 }
 
 
