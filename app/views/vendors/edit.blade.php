@@ -22,6 +22,8 @@
 {{ Form::model($vendor, array('route' => ['vendors.update', $vendor->id], 'id' => 'v-edit', 'method' => 'PUT', 'class' => 'spacer pure-form pure-form-stacked')) }}
     <fieldset>
 
+        {{Form::hidden('user_id', Auth::id())}}
+
         <legend>Edit Account</legend>
         <label>Service Name</label>
         {{Form::text('vendor_name')}}
@@ -56,7 +58,7 @@
     	<H3>In a sentence, describe your service to potential customers</h3>
           	{{Form::textarea('description')}}
 
-           <button type="submit" class="pure-button pure-button-primary">Create Account</button>
+           <button type="submit" class="pure-button pure-button-primary">Edit Service</button>
  
 {{ Form::close() }}
 

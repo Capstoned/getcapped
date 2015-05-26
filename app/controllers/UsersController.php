@@ -106,7 +106,6 @@ class UsersController extends BaseController
         
         if ($user->user_type == 0)
         {
-            // dd($user);
             return $this->redirectUser($user);
         } else {
             return $this->redirectVendor($user);
@@ -120,6 +119,7 @@ class UsersController extends BaseController
         {
             return Redirect::action('PartiesController@create');
         } else {
+            
             return Redirect::action('HomeController@showDashboard');
         }
     }

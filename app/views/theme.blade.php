@@ -1,3 +1,4 @@
+
 <!doctype html>
 <!--[if lt IE 7]><html lang="en" class="no-js ie6"><![endif]-->
 <!--[if IE 7]><html lang="en" class="no-js ie7"><![endif]-->
@@ -74,7 +75,7 @@
                                 <li><a class="getApp" href="/users/login"><i class="fa fa-sign-in"></i> sign in</a>
                                 </li>
                             @else
-                                <li><a href="/dashboard"><i class="fa fa-archive"></i> my account</a></li>
+                                <li><a href="{{action('UsersController@checkUserType')}}"><i class="fa fa-archive"></i> my account</a></li>
                             @endif
                             <li><a href="#support"><i class="fa fa-envelope"></i> contact us</a>
                             </li>
