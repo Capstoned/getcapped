@@ -132,11 +132,16 @@ class PartiesController extends BaseController {
 			{
 				Mail::send('emails.vendorNotification', ['party_type' => Party::$partyTypes[$party->party_type],
 														 'comments'   => $party->comments,
-														 'event_date' => $party->event_date],
+														 'event_date' => $party->event_date,
+														 'address' => $party->address,
+														 'city' => $party->city,
+														 'state' => $party->state,
+														 'zip_code' => $party->zip_code
+														 ],
 					function($message) use ($email)
 					{
-						$message->from('immaxwoohoo@mywoohoo.email', 'Maxine');
-						$message->to($email, "Your name here")->subject('Here\'s your party reservation!');
+						$message->from('party@planner.email', 'PartyMaster');
+						$message->to($email, "Your name here")->subject('Party Proposal');
 					});
 			}
 

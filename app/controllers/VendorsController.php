@@ -94,6 +94,7 @@ class VendorsController extends BaseController {
 
 		if ($validator->fails())
 		{
+			dd($_POST);
 			Session::flash('errorMessage', 'Post not saved');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
