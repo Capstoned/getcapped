@@ -1,23 +1,16 @@
 @extends('layouts.master')
 
+@section('head')
+
+<link rel="stylesheet" href="/css/partyplanner.css">
+
+@stop
+
 @section('content')
 
+<div class="container">
 <div id= "vendor_edit">
 
-
-<style type="text/css">
-  .partytype{
-    float:left;
-  }
-  .service{
-    float: left;
-    padding-left: 40px;
-  }
-
-  .spacer {
-    padding-top: 200px;
-  }
-</style>
 
 {{ Form::model($vendor, array('route' => ['vendors.update', $vendor->id], 'id' => 'v-edit', 'method' => 'PUT', 'class' => 'spacer pure-form pure-form-stacked')) }}
     <fieldset>
@@ -65,6 +58,7 @@
         
 
 
+</div>
 </div>
 
 @stop
