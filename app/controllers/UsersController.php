@@ -103,8 +103,10 @@ class UsersController extends BaseController
     public function checkUserType()
     {
         $user = User::find(Auth::id());
+        
         if ($user->user_type == 0)
         {
+            // dd($user);
             return $this->redirectUser($user);
         } else {
             return $this->redirectVendor($user);
