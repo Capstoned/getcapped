@@ -22,9 +22,7 @@
 
 
 
-
-
-    <script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.32033.js"></script>
 </head>
 <body>
 
@@ -42,18 +40,13 @@
     <header>
 @include('partials.navbar')
 
-  
-  </section>
 <!-- change from img to background image for this div -->
     <section id="section-one">
 <div class="container">
     <div class ="mainbox">
 
-<h1 class="weather-main">Your Events <i class="fa fa-gift"></i></h1>
-
 
   <?php $parties = [] ?>
-
 
   @foreach(Auth::user()->parties as $userParty)
 
@@ -96,6 +89,7 @@
 
   @endforeach
 
+  
   </div>
 </div>
 
@@ -162,8 +156,6 @@
 
 
 <script src="/js/js_ajax_weather.js"></script>
-
-
 
 <script>
 
@@ -265,13 +257,7 @@
 
   var events = [
     { date: currentMonth + '-' + currentDay, title: 'Today', location: '' },
-<<<<<<< HEAD
-    { date: eventMonth + '-' + eventDay, title: 'Cat Frisbee', location: 'Jefferson Park' },
-    { date: currentMonth + '-' + '11', title: 'Kitten Demonstration', location: 'Center for Beautiful Cats' },
-    { date: nextMonth + '-' + eventDay,    title: 'Small Cat Photo Session', location: 'Center for Cat Photography' }
-=======
     { date: eventMonth + '-' + eventDay, title: 'Party', location: '' },
->>>>>>> master
   ];
 
 $('#mini-clndr').clndr({
