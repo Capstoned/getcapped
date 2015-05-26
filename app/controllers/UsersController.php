@@ -103,6 +103,7 @@ class UsersController extends BaseController
     public function checkUserType()
     {
         $user = User::find(Auth::id());
+        
         if ($user->user_type == 0)
         {
             return $this->redirectUser($user);
@@ -118,6 +119,7 @@ class UsersController extends BaseController
         {
             return Redirect::action('PartiesController@create');
         } else {
+            
             return Redirect::action('HomeController@showDashboard');
         }
     }
