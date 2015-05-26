@@ -13,28 +13,15 @@ class HomeController extends BaseController {
 	|
 	*/
 
+	// ?!?
+
 	public function showHome()
 	{
 		return View::make('theme');
 	}
 
 
-
-	// Vendor sign in and dashboard views
-
-	public function showVendorDash()
-	{
-		return View::make('vendor-dash');
-	}
-
-
-	// User sign in and dashboard views
-
-	public function showUserDash()
-	{
-		return View::make('user-dash');
-	}
-
+	// Show dashboard for logged in user and pass variables for use with API's
 
 	public function showDashboard()
 	{
@@ -42,10 +29,11 @@ class HomeController extends BaseController {
 	   	$user_id = Auth::id();
 	   	$party = Party::where('user_id', '=', $user_id)->first();
 
-	   	// dd($party);
 
 		return View::make('dashboard')->with('party', $party);
 	}
+
+	// Display the 'About' page
 
 	public function showAbout()
 	{

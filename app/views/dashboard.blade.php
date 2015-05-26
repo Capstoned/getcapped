@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="favicon.png">
 
     <link rel="stylesheet" href="/css/bootstrap.css">
-    
+
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/slick.css">
@@ -38,7 +38,7 @@
             </div>
         </div>
     </div>
-   
+
     <header>
 @include('partials.navbar')
 
@@ -56,18 +56,18 @@
 
 
   @foreach(Auth::user()->parties as $userParty)
-    
+
     <div class="parties">
-    
+
       <h4>Party Type</h4>
-      
+
       {{Party::$partyTypes[$userParty->party_type] }}
       <br>
 
       <h4>Event Date</h4>
       <p class = "party_date" data = "{{{$userParty->event_date}}}">{{ $userParty->getEventDate($userParty->event_date) }} </p>
       <br>
-      
+
       <h4>Services Requested</h4>
         <?php $services = $userParty->services; ?>
       @foreach($services as $service)
@@ -83,7 +83,7 @@
       {{ $userParty->state }}
       <br>
       {{ $userParty->zip_code }}
-      
+
       <h4>Comments</h4>
       {{ $userParty->comments }}
       <br>
@@ -91,7 +91,7 @@
       <a class="btn btn-default" href="{{{ action ('PartiesController@edit', $userParty->id) }}}" role="button">Edit Party</a>
       <br>
     </div>
-   
+
    <?php $parties[] = $userParty ?>
 
   @endforeach
@@ -119,7 +119,7 @@
   </div>
     </section>
 <!-- This is the div for the calendar, #mini-clndr -->
-    
+
 
     <section id="section-two">
         <h1 class="weather-main">Weather <i class="fa fa-picture-o"></i></h1>
@@ -130,7 +130,7 @@
       <div id="weather"></div>
 
       <div class ="container-fluid">
-      
+
           <div class="row">
           <h2 class="weather-title">3 Day Forecast</h2>
 
@@ -166,7 +166,98 @@
 
 
 <script>
-  
+
+  (function() {
+
+    // ---------------------------------------------------/
+    // Zipcode Weather
+    // ---------------------------------------------------/
+    console.log({{ $party->zip_code }});
+
+    var cityName = $('#city');
+    var forecastHtml = '';
+
+    var currentWeather = $.ajax('http://api.openweathermap.org/data/2.5/weather?q=' + {{ $party->zip_code }} + '&APPID=7511d6aa040231db8c1b8f06b764d188');
+
+    currentWeather.done(function(data) {
+
+      console.log(data);
+
+      var currentTemp = '<p>' + parseInt((data.main.temp-273.15) * 1.8 + 32) + '°F</p>';
+      var icon = '<img src="http://openweathermap.org/img/w/' + data.weather[0].icon + '.png">';
+      var windSpeed = '<p>Wind speed: ' + data.wind.speed + '</p>';
+      var humidity = '<p>Humidity: ' + data.main.humidity + ' %</p>';
+      var pressure = '<p>Pressure: ' + data.main.pressure + ' hpa</p>';
+
+      var weatherToDisplay = currentTemp + icon + windSpeed + humidity + pressure;
+      var cityName = '<h2>' + data.name + '</h2>';
+      $('#city').html(cityName);
+      $('#weather').html(weatherToDisplay);
+
+    });
+
+    var forecastWeather = $.ajax('http://api.openweathermap.org/data/2.5/forecast/daily?' + {{ $party->zip_code }} + '&cnt=3&mode=json&APPID=7511d6aa040231db8c1b8f06b764d188');
+
+    forecastWeather.done(function(data) {
+
+      $(data.list).each(function(index, element) {
+
+        console.log(element);
+
+        forecastHtml += '<div class="col-md-4"><img src="http://openweathermap.org/img/w/' + element.weather[0].icon + '.png">'
+
+        forecastHtml += '<p>Day Temp: ' + parseInt((element.temp.day-273.15) * 1.8 + 32) + '°F</p>';
+
+        forecastHtml += '<p>Evening Temp: ' + parseInt((element.temp.eve-273.15) * 1.8 + 32) + '°F</p>';
+
+        forecastHtml += '<p>' + element.weather[0].main + ": " + element.weather[0].description + '</p>';
+
+        forecastHtml += '<p>Humidity: ' + element.humidity + ' %</p>';
+
+        forecastHtml += '<p>Pressure: ' + element.pressure + ' hpa</p></div>';
+
+        $('#forecast').html(forecastHtml);
+
+      });
+
+      var googleWeather;
+
+      // Set our map options
+      var mapOptions = {
+        // Set the zoom level
+        zoom: 5,
+        // This sets the center of the map at our location
+        center: { lat: 37.6014, lng: 120.9572 }
+      };
+
+      // Render the map
+      var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+
+      // Add the marker to our existing map
+      var marker = new google.maps.Marker({
+        position: mapOptions.center,
+        draggable: true,
+        animation: google.maps.Animation.BOUNCE,
+        map: map
+      });
+
+    });
+
+    currentWeather.fail(function() {
+      console.log('500, error connecting to openweathermap API');
+    });
+
+    forecastWeather.fail(function() {
+      console.log('Error Connecting to openweathermap forecast API');
+    });
+
+})();
+
+
+// ---------------------------------------------------/
+// Calendar
+// ---------------------------------------------------/
+
   var currentMonth = moment().format('YYYY-MM');
   var currentDay = moment().format('DD');
   var eventMonth = '{{substr($userParty->event_date, 0, -12)}}';

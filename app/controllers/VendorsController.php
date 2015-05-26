@@ -34,7 +34,7 @@ class VendorsController extends BaseController {
 		$validator = Validator::make($data = Input::all(), Vendor::$rules);
 
 		if ($validator->fails())
-		{
+		{ dd($_POST);
 			Session::flash('errorMessage', 'Vendor Create Error');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
@@ -128,4 +128,8 @@ class VendorsController extends BaseController {
 			return View::make('vendors.edit')->with(['vendor'=> $vendor]);
 		}
 	}
+
+
+
+
 }

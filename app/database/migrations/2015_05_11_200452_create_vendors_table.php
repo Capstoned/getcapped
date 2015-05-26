@@ -22,7 +22,7 @@ class CreateVendorsTable extends Migration {
 			$table->string('city');
 			$table->string('state');
 			$table->string('zip_code');
-			$table->enum('service_code', array('0', '2'));
+			$table->enum('service_id', array('1', '2', '3'));
 			$table->text('description');
 			$table->timestamps();
 			$table->rememberToken();

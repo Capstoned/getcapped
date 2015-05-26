@@ -14,7 +14,7 @@ class VendorsTableSeeder extends Seeder {
 		$vendor->city = 'Romeoville';
 		$vendor->state = 'IL';
 		$vendor->zip_code = '60446';
-		$vendor->service_code = '0';
+		$vendor->service_id = '1';
 		$vendor->description = 'Party ballons, ballon puppets, and more!';
 		$vendor->save();
 
@@ -25,7 +25,7 @@ class VendorsTableSeeder extends Seeder {
 		$vendor2->city = 'Hattiesburg';
 		$vendor2->state = 'MS';
 		$vendor2->zip_code = '39401';
-		$vendor2->service_code = '2';
+		$vendor2->service_id = '2';
 		$vendor2->description = 'Specializing in Trance, Country, and Funk';
 		$vendor2->save();
 
@@ -36,7 +36,7 @@ class VendorsTableSeeder extends Seeder {
 		$vendor3->city = 'Baltimore';
 		$vendor3->state = 'MD';
 		$vendor3->zip_code = '21206';
-		$vendor3->service_code = '1';
+		$vendor3->service_id = '3';
 		$vendor3->description = "Carly's does BBQ, pasta, and Polynesian cuisine for any occassion.";
 		$vendor3->save();
 	}

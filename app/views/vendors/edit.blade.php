@@ -45,9 +45,9 @@
 
             <h3>What service do you offer?</h3>    
         <div class="radio">
-        	{{Form::radio('service_code', 0)}} Balloons <br>
-        	{{Form::radio('service_code', 1)}} Catering <br>
-        	{{Form::radio('service_code', 2)}} DJ <br>
+        	{{Form::radio('service_id', 1)}} Balloons <br>
+        	{{Form::radio('service_id', 2)}} Catering <br>
+        	{{Form::radio('service_id', 3)}} DJ <br>
          
         </div>
         

@@ -38,28 +38,29 @@ class PartiesController extends BaseController {
 			Session::flash('errorMessage', 'Post not saved');
 			return Redirect::back()->withErrors($validator)->withInput();
 		}
-		
+			
 			$party = new Party();
 			$party->user_id = Input::get('user_id');
 			$party->party_type = Input::get('party_type');
 			$party->comments = Input::get('comments');
 			$party->event_date = Input::get('event_date');
-			$party->event_status = 0;
 			$party->address = Input::get('address');
 			$party->city = Input::get('city');
 			$party->state = Input::get('state');
 			$party->zip_code = Input::get('zip_code');
 			$party->save();
+
+			// Attach service types for pivot table
 			$serviceTypes = Input::get('service_id');
 
 			foreach ($serviceTypes as $serviceType)
 			{
 				$party->services()->attach($serviceType);
-
 			};
 
-			Session::flash('successMessage', 'Saved successfully');
-			return Redirect::back()->withInput();
+
+
+			return Redirect::action('UsersController@checkUserType');
 	}
 
 	/**
@@ -109,27 +110,40 @@ class PartiesController extends BaseController {
 			$party->party_type = Input::get('party_type');
 			$party->comments = Input::get('comments');
 			$party->event_date = Input::get('event_date');
-			$party->event_status = 0;
 			$party->address = Input::get('address');
 			$party->city = Input::get('city');
 			$party->state = Input::get('state');
 			$party->zip_code = Input::get('zip_code');
 			$party->services()->detach();
 			$party->save();
-<<<<<<< HEAD
-=======
-	
 
->>>>>>> master
+
 			$serviceTypes = Input::get('service_id');
-			foreach ($serviceTypes as $serviceType)
+
+			$party->services()->sync($serviceTypes);
+
+			$vendorEmails = User::whereHas('vendor', function($q) use ($serviceTypes) {
+				$q->whereIn('service_id', $serviceTypes);
+			})->lists('email');
+
+			// dd($vendorEmails);
+
+			foreach($vendorEmails as $email)
 			{
-				$party->services()->attach($serviceType);
-	
-			};
-	
-			Session::flash('successMessage', 'Saved successfully');
-			return Redirect::back()->withInput();
+				Mail::send('emails.vendorNotification', ['party_type' => Party::$partyTypes[$party->party_type],
+														 'comments'   => $party->comments,
+														 'event_date' => $party->event_date],
+					function($message) use ($email)
+					{
+						$message->from('immaxwoohoo@mywoohoo.email', 'Maxine');
+						$message->to($email, "Your name here")->subject('Here\'s your party reservation!');
+					});
+			}
+
+
+					
+			return Redirect::action('UsersController@checkUserType');
+
 	}
 	
 

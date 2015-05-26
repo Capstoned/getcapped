@@ -64,7 +64,7 @@ class UsersController extends BaseController
     public function login()
     {
         if (Confide::user()) {
-            return Redirect::to('users-dash');
+            return Redirect::action('HomeController@showHome');
         } else {
             // return View::make(Config::get('confide::login_form'));
             return View::make('users.login');
@@ -82,7 +82,8 @@ class UsersController extends BaseController
         $input = Input::all();
 
         if ($repo->login($input)) {
-            return Redirect::intended('/');
+            // return Redirect::intended('/');
+            return $this->checkUserType();
         } else {
             if ($repo->isThrottled($input)) {
                 $err_msg = Lang::get('confide::confide.alerts.too_many_attempts');
@@ -95,6 +96,41 @@ class UsersController extends BaseController
             return Redirect::action('UsersController@login')
                 ->withInput(Input::except('password'))
                 ->with('error', $err_msg);
+        }
+    }
+   
+    // Check to determine what kind of user the logged in user is
+    public function checkUserType()
+    {
+        $user = User::find(Auth::id());
+        if ($user->user_type == 0)
+        {
+            return $this->redirectUser($user);
+        } else {
+            return $this->redirectVendor($user);
+        }
+    }
+   
+    // Redirect the user to parties create if has no parties; else to dashboard
+    public function redirectUser($user)
+    {
+        if (empty($user->parties()->first()))
+        {
+            return Redirect::action('PartiesController@create');
+        } else {
+            return Redirect::action('HomeController@showDashboard');
+        }
+    }
+   
+    // Redirect the vendor user to create page if vendor entry does not exist, or edit existing entry
+     public function redirectVendor($user)
+    {
+        $vendor = Vendor::where('user_id', $user->id)->first();
+        if (empty($vendor))
+        {
+            return Redirect::action('VendorsController@create');
+        } else {
+            return Redirect::action("VendorsController@edit", $vendor->id);
         }
     }
 
@@ -196,7 +232,14 @@ class UsersController extends BaseController
     {
         Confide::logout();
 
-        return Redirect::to('/');
+        return Redirect::action('HomeController@showHome');
+    }
+
+    public function getUserEmail()
+    {
+
+        $user = User::where('id', $id)->first();
+        return $user->email;
     }
 
     // public function confirmationEmail()
