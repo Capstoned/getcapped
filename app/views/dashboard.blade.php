@@ -118,10 +118,15 @@
     <section id="section-two">
         <h1 class="weather-main">Weather <i class="fa fa-picture-o"></i></h1>
     <div class="container">
-      <div id="city"></div>
+      <h3>City</h3>
+      <hr>
+      <div id="city">
+
+      </div>
       <h2 class="weather-title">Today's Weather</h2>
 
       <div id="weather"></div>
+      <hr>
 
       <div class ="container-fluid">
 
