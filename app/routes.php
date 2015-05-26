@@ -47,4 +47,5 @@ Route::get('users/logout', 'UsersController@logout');
 // Vendor dashboard and edit routes
 Route::get('/vendor-dash', 'VendorsController@showDash');
 Route::put('/vendor-dash/{id}', 'VendorsController@update');
-// User dashboard and edit routes
+
+Route::get('getusertype', 'UsersController@checkUserType');

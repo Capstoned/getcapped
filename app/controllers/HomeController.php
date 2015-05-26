@@ -21,22 +21,6 @@ class HomeController extends BaseController {
 	}
 
 
-
-	// Vendor sign in and dashboard views
-
-	public function showVendorDash()
-	{
-		return View::make('vendor-dash');
-	}
-
-
-	// User sign in and dashboard views
-
-	public function showUserDash()
-	{
-		return View::make('user-dash');
-	}
-
 	// Show dashboard for logged in user and pass variables for use with API's
 
 	public function showDashboard()
