@@ -114,7 +114,13 @@ class PartiesController extends BaseController {
 			$party->city = Input::get('city');
 			$party->state = Input::get('state');
 			$party->zip_code = Input::get('zip_code');
+			$party->services()->detach();
 			$party->save();
+<<<<<<< HEAD
+=======
+	
+
+>>>>>>> master
 			$serviceTypes = Input::get('service_id');
 			foreach ($serviceTypes as $serviceType)
 			{
