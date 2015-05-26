@@ -29,4 +29,29 @@ class Vendor extends BaseModel {
 						'2' => 'Catering', 
 						'3' => 'DJ', ];
 
+	// Search for the emails of Vendors of a given Service
+	public static function getServiceVendorEmails($service)
+	{
+		$vendors = Vendor::where('service_id', $service)->get();
+
+		$vendorEmails = [];
+		foreach ($vendors as $vendor)
+		{
+			$user = User::find($vendor->user_id);
+			$vendorEmails[] = $user->email;
+			// var_dump($vendor->user_id)
+			// dd($vendor);
+			//$vendorUserIds = $vendor->user_id;
+			// dd($vendorUserIds->first());
+		}
+
+		return $vendorEmails;
+		// foreach ($vendorUserIds as $id)
+		// 	$userEmail = User->getUserEmailById();
+	}
+
+	public function user()
+	{
+		return $this->belongsTo('User');
+	}
 }

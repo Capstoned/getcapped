@@ -24,10 +24,10 @@
                                 <li><a class="getApp" href="/#getApp"><i class="fa fa-sign-in"></i> sign in</a>
                                 </li>
                             @else
-                                <li><a href="/dashboard"><i class="fa fa-archive"></i> my account</a></li>
+                                <li><a href="{{action('UsersController@checkUserType')}}"><i class="fa fa-archive"></i> my account</a></li>
                             @endif
                             @if(Auth::check())
-                                <li><a href="users/logout"><i class="fa fa-sign-out"></i> sign out</a>
+                                <li><a href="{{action('UsersController@logout')}}"><i class="fa fa-sign-out"></i> sign out</a>
                             </li>
                             @endif
                             <li><a href="/#support"><i class="fa fa-envelope"></i> contact us</a>

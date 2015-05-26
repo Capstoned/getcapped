@@ -35,11 +35,6 @@ class Party extends BaseModel {
 
 
 	// Many to many model relationships
-	public function vendors()
-	{
-		return $this->belongsToMany('Vendor');
-	}
-	
 	public function services()
 	{
 		return $this->belongsToMany('Service');
