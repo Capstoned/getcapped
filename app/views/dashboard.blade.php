@@ -54,7 +54,7 @@
 
       <h4>Party Type</h4>
 
-      {{Party::$partyTypes[$userParty->party_type] }}
+      <p>{{Party::$partyTypes[$userParty->party_type] }}</p>
       <br>
 
       <h4>Event Date</h4>
@@ -64,21 +64,21 @@
       <h4>Services Requested</h4>
         <?php $services = $userParty->services; ?>
       @foreach($services as $service)
-        {{ $service->description }} <br>
+        <p>{{ $service->description }}</p> <br>
       @endforeach
 
 
       <h4>Address</h4>
-      {{ $userParty->address }}
+      <p>{{ $userParty->address }}</p>
       <br>
-      {{ $userParty->city }}
+      <p>{{ $userParty->city }}</p>
       <br>
-      {{ $userParty->state }}
+      <p>{{ $userParty->state }}</p>
       <br>
-      {{ $userParty->zip_code }}
+      <p>{{ $userParty->zip_code }}</p>
 
       <h4>Comments</h4>
-      {{ $userParty->comments }}
+      <p>{{ $userParty->comments }}</p>
       <br>
       <br>
       <a class="btn btn-default" href="{{{ action ('PartiesController@edit', $userParty->id) }}}" role="button">Edit Party</a>
@@ -118,7 +118,7 @@
     <section id="section-two">
         <h1 class="weather-main">Weather <i class="fa fa-picture-o"></i></h1>
     <div class="container">
-      <h3>City</h3>
+      <h2>City</h2>
       <hr>
       <div id="city">
 
