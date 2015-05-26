@@ -22,11 +22,11 @@
                         <h4>Max Mayfield</h4>
                     </div>
                     <div class="two">
-                        <img src="img/freeze/screens/placeholder.png" alt="">
+                        <img src="img/freeze/screens/kbdemodaycolor.jpeg" alt="">
                         <h4>Keyasha Brothern</h4>
                     </div>
                     <div class="three">
-                        <img src="img/freeze/screens/placeholder.png" alt="">
+                        <img src="img/freeze/screens/bennydemoday.jpg" alt="">
                         <h4>Benito Cardenas</h4>
                     </div>
                 </div>
