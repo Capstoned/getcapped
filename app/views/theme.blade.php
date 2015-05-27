@@ -194,22 +194,22 @@
                         </div>
 
                         <div class="tp-caption lfb visible-xs" data-x="center" data-y="center" data-hoffset="0" data-voffset="400" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
-                            <a href="#" class="btn btn-primary inverse btn-lg">Purchase</a>
+                            <a href="/#getApp" class="btn btn-primary inverse btn-lg">Sign Up</a>
                         </div>
 
                         
                         <div class="tp-caption mediumlarge_light_white sfl hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="-50" data-speed="1000" data-start="1000" data-easing="Power4.easeOut">
-                           Powerful Responsive
+                          Party Planning
                         </div>
                         <div class="tp-caption mediumlarge_light_white sft hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="0" data-speed="1000" data-start="1200" data-easing="Power4.easeOut">
-                           Party Planning
+                           Just A Click Away!
                         </div>
                         <div class="tp-caption small_light_white sfb hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="80" data-speed="1000" data-start="1600" data-easing="Power4.easeOut">
-                           <p>Nulla pretium libero interdum, tempus lorem non, rutrum diam. <br> Quisque pellentesque diam sed pulvinar lobortis. Vestibulum ante <br>ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+                           <p>Party Planner was created to make event planning easier.<br> All you have to do is sign up for an account and you're just<br> clicks away from the event of your dreams!</p>
                         </div>
 
                         <div class="tp-caption lfl hidden-xs" data-x="left" data-y="center" data-hoffset="0" data-voffset="160" data-speed="1000" data-start="1800" data-easing="Power4.easeOut">
-                            <a href="#" class="btn btn-primary inverse btn-lg">Purchase</a>
+                            <a href="/#getApp" class="btn btn-primary inverse btn-lg">Sign Up</a>
                         </div>
                         
                         
@@ -241,28 +241,28 @@
                         <div class="about-item scrollpoint sp-effect2">
                             <i class="fa fa-download fa-2x"></i>
                             <h3>Easy setup</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            <p>Just create an account with an email and password and you're on your way to becoming the host of year!</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6" >
                         <div class="about-item scrollpoint sp-effect5">
                             <i class="fa fa-mobile fa-2x"></i>
                             <h3>On-the-go</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            <p>Sign up, sign in and go! You have the freedom to plan, create,and edit events from any device.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6" >
                         <div class="about-item scrollpoint sp-effect5">
                             <i class="fa fa-users fa-2x"></i>
                             <h3>Social connect</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            <p>Communicate with vendors directly. Once your parties are created, we'll send emails to let vendors know to contact you about their services.</p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-3 col-xs-6" >
                         <div class="about-item scrollpoint sp-effect1">
                             <i class="fa fa-sliders fa-2x"></i>
                             <h3>Dedicated support</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore.</p>
+                            <p>Having trouble setting up your account? Want more information on how Party Planner can work for you? Feel free to contact us, we're here to help.</p>
                         </div>
                     </div>
                 </div>
@@ -363,69 +363,69 @@
                 <div class="section-heading scrollpoint sp-effect3">
                     <h1>Features</h1>
                     <div class="divider"></div>
-                    <p>Learn more about the easiest way to create memorable events</p>
+                    <p>Learn more about the easiest way to create memorable events.</p>
                 </div>
                 <div class="row">
                     <div class="col-md-4 col-sm-4 scrollpoint sp-effect1">
                         <div class="media media-left feature">
-                            <a class="pull-right" href="#">
+                            <a class="pull-right">
                                 <i class="fa fa-cogs fa-2x"></i>
                             </a>
                             <div class="media-body">
                                 <h3 class="media-heading">User Settings</h3>
-                                Lorem ipsum dolor sit amet.
+                                Customize and manage your dashboard the way you like it.
                             </div>
                         </div>
                         <div class="media media-left feature">
-                            <a class="pull-right" href="#">
+                            <a class="pull-right">
                                 <i class="fa fa-envelope fa-2x"></i>
                             </a>
                             <div class="media-body">
-                                <h3 class="media-heading">Messages Inbox</h3>
-                                Lorem ipsum dolor sit amet.
+                                <h3 class="media-heading">Notifications</h3>
+                                Communicate directly with the vendors connected to your party.
                             </div>
                         </div>
 
                         <div class="media media-left feature">
-                            <a class="pull-right" href="#">
+                            <a class="pull-right">
                                 <i class="fa fa-calendar fa-2x"></i>
                             </a>
                             <div class="media-body">
-                                <h3 class="media-heading">Calendar / Planner</h3>
-                                Lorem ipsum dolor sit amet.
+                                <h3 class="media-heading">Calendar</h3>
+                                See your parties on your dashboard calendar.
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4" >
-                        <img src="img/freeze/screens/placeholder.png" class="img-responsive scrollpoint sp-effect5" alt="">
+                        <img src="img/freeze/screens/calendar.jpg" class="img-responsive scrollpoint sp-effect5" alt="">
                     </div>
                     <div class="col-md-4 col-sm-4 scrollpoint sp-effect2">
                         <div class="media feature">
-                            <a class="pull-left" href="#">
+                            <a class="pull-left">
                                 <i class="fa fa-map-marker fa-2x"></i>
                             </a>
                             <div class="media-body">
-                                <h3 class="media-heading">My Places</h3>
-                                Lorem ipsum dolor sit amet.
+                                <h3 class="media-heading">My Events</h3>
+                                Have up to date location information for your event.
                             </div>
                         </div>
 
                         <div class="media feature">
-                            <a class="pull-left" href="#">
+                            <a class="pull-left">
                                 <i class="fa fa-picture-o fa-2x"></i>
                             </a>
                             <div class="media-body">
                                 <h3 class="media-heading">Weather on-the-go</h3>
-                                Lorem ipsum dolor sit amet.
+                                Weather is important. Get current and 3 day forecasts relevant to your event on your dashboard.
                             </div>
                         </div>
                         <div class="media active feature">
-                            <a class="pull-left" href="#">
+                            <a class="pull-left">
                                 <i class="fa fa-plus fa-2x"></i>
                             </a>
                             <div class="media-body">
                                 <h3 class="media-heading">And much more!</h3>
-                                Lorem ipsum dolor sit amet.
+                                Party Planner, events with a click.
                             </div>
                         </div>
                     </div>
@@ -451,7 +451,7 @@
                                 <b>User</b>
                             </a>
                             
-                                <a href="/users/create" class="btn btn-primary inverse scrollpoint sp-effect2">
+                                <a class="btn btn-primary inverse scrollpoint sp-effect2">
                                     <i class="fa fa-user fa-3x pull-left"></i>
                                     <span>Sign Up As A</span><br>
                                     <b>Vendor</b>
@@ -505,7 +505,7 @@
                                     </a>
                                     <div class="media-body">
                                         <h4 class="media-heading">
-                                            <a href="mailto:support@oleose.com">support@partyplanner.com</a>
+                                            <a>support@partyplanner.com</a>
                                         </h4>
                                     </div>
                                 </div>

@@ -13,4 +13,9 @@ section#screens .slider div h4 {
    font-size: 24px;
    font-weight: bold;
    border-radius: 5px;
+}h1{
+    color: #fff;
+}
+.section-heading p {
+    color: #fff;
 }

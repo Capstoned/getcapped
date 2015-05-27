@@ -13,7 +13,7 @@
     text-align: center;
 }
 
-h1, h2, #city{
+h1, h2,h4,p, #city{
     color: #fff;
 }
 
@@ -24,14 +24,14 @@ h1, h2, #city{
     margin-right: auto;
 }
 .mainbox{
-    margin-top: 300px;
+    margin-top: 500px;
 }
 .parties{
     border: 2px solid  #000;
     border-radius: 5px;
     margin-right: 30px;
     width: 350px;
-    height: 450px;
+    height: 600px;
     float: left;
     padding-left: 95px;
     padding-top: 15px;
@@ -39,5 +39,8 @@ h1, h2, #city{
 }
 section {
   position: relative;
-  padding-bottom: 275px;
+  padding-bottom: 300px;
+}
+#weather{
+    margin-left: 490px;
 }

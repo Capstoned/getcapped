@@ -49,17 +49,17 @@ class PartiesController extends BaseController {
 			$party->state = Input::get('state');
 			$party->zip_code = Input::get('zip_code');
 			$party->save();
-	
+
 			// Attach service types for pivot table
 			$serviceTypes = Input::get('service_id');
-			
+
 			foreach ($serviceTypes as $serviceType)
 			{
 				$party->services()->attach($serviceType);
 			};
 
 
-	
+
 			return Redirect::action('UsersController@checkUserType');
 	}
 
@@ -116,7 +116,7 @@ class PartiesController extends BaseController {
 			$party->zip_code = Input::get('zip_code');
 			$party->services()->detach();
 			$party->save();
-	
+
 
 			$serviceTypes = Input::get('service_id');
 
@@ -143,9 +143,9 @@ class PartiesController extends BaseController {
 						$message->from('party@planner.email', 'PartyMaster');
 						$message->to($email, "Your name here")->subject('Party Proposal');
 					});
-			}	
+			}
 
-	
+
 					
 			return Redirect::action('UsersController@checkUserType');
 
