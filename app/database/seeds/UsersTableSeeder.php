@@ -32,6 +32,8 @@ class UsersTableSeeder extends Seeder {
 		$user1->confirmation_code = md5(uniqid(mt_rand(), true));
 		$user1->confirmed = 1;
 		$user1->save();
+
+		
 		
 		// Log error data if unable to save user 
 		if(! $user->save()) {
